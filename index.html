@@ -1,0 +1,3715 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Frezool Industries Private Limited – India-based FMCG manufacturing company focused on hygiene and home care solutions. Innovating Hygiene. Delivering Trust." />
+  <meta name="keywords"
+    content="Frezool Industries, FMCG India, hygiene solutions, home care manufacturing, Phenora brand, contract manufacturing India" />
+  <title>
+    Frezool Industries Private Limited | Innovating Hygiene. Delivering Trust.
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ["Inter", "sans-serif"] },
+          colors: {
+            navy: {
+              50: "#f0f3f9",
+              100: "#dce3f0",
+              200: "#b8c7e1",
+              300: "#8da5cc",
+              400: "#6483b4",
+              500: "#4567a0",
+              600: "#37578e",
+              700: "#2d4773",
+              800: "#1a2744",
+              900: "#0f1b2d",
+              950: "#0a1628",
+            },
+            brand: {
+              50: "#ecfdf5",
+              100: "#d1fae5",
+              200: "#a7f3d0",
+              300: "#6ee7b7",
+              400: "#34d399",
+              500: "#10b981",
+              600: "#059669",
+              700: "#047857",
+              800: "#065f46",
+              900: "#064e3b",
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    * {
+      font-family: "Inter", sans-serif;
+    }
+
+    ::selection {
+      background: #d1fae5;
+      color: #064e3b;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f0f3f9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #8da5cc;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6483b4;
+    }
+
+    .page-section {
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .page-section.active {
+      display: block;
+      animation: pageIn 0.6s ease forwards;
+    }
+
+    @keyframes pageIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    .reveal-delay-5 {
+      transition-delay: 0.5s;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg,
+          #0a1628 0%,
+          #0f1b2d 30%,
+          #1a2744 60%,
+          #1e3a5f 100%);
+    }
+
+    .hero-pattern {
+      background-image:
+        radial-gradient(circle at 20% 50%,
+          rgba(16, 185, 129, 0.08) 0%,
+          transparent 50%),
+        radial-gradient(circle at 80% 20%,
+          rgba(16, 185, 129, 0.05) 0%,
+          transparent 40%),
+        radial-gradient(circle at 60% 80%,
+          rgba(100, 131, 180, 0.1) 0%,
+          transparent 50%);
+    }
+
+    .green-glow {
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15, 27, 45, 0.1);
+    }
+
+    .nav-scrolled {
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: all 0.2s ease;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .stat-counter {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #059669;
+      background: #ecfdf5;
+      padding: 6px 16px;
+      border-radius: 100px;
+      border: 1px solid #d1fae5;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      padding: 16px 24px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast-success {
+      background: #059669;
+    }
+
+    .toast-error {
+      background: #dc2626;
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    .mobile-overlay {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(1);
+        opacity: 0.4;
+      }
+
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .pulse-ring::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border: 2px solid #10b981;
+      border-radius: 50%;
+      animation: pulse-ring 2s ease-out infinite;
+    }
+
+    .cert-badge {
+      transition: all 0.3s ease;
+    }
+
+    .cert-badge:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+    }
+
+    .product-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #10b981, #34d399);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+
+    .product-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* ============================================
+   COLOR VISIBILITY FIXES — Replace in <style> start here
+   ============================================ */
+
+    /* 1. NAV TEXT — better contrast on transparent dark bg */
+    .nav-link {
+      color: rgba(255, 255, 255, 0.92) !important;
+      font-weight: 500;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-link:hover {
+      color: #ffffff !important;
+      background: rgba(255, 255, 255, 0.12) !important;
+    }
+
+    /* Scrolled state override */
+    .nav-scrolled .nav-link {
+      color: #1a2744 !important;
+      text-shadow: none;
+      font-weight: 500;
+    }
+
+    .nav-scrolled .nav-link:hover {
+      color: #0a1628 !important;
+      background: #f0f3f9 !important;
+    }
+
+    /* 2. HERO GRADIENT — lighter so text pops more */
+    .hero-gradient {
+      background: linear-gradient(155deg,
+          #0d1f3c 0%,
+          #122a4a 25%,
+          #1a365d 50%,
+          #1e4070 75%,
+          #234a7a 100%) !important;
+    }
+
+    /* 3. HERO TEXT — boost white brightness */
+    .hero-gradient h1 {
+      color: #ffffff !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-gradient p,
+    .hero-gradient span {
+      color: #b8c7e1 !important;
+    }
+
+    .hero-gradient .stat-counter {
+      color: #ffffff !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-gradient .text-navy-200,
+    .hero-gradient .text-navy-300 {
+      color: #94a8cc !important;
+    }
+
+    /* 4. SECTION LABEL — more contrast */
+    .section-label {
+      color: #047857 !important;
+      background: #d1fae5 !important;
+      border-color: #a7f3d0 !important;
+      font-weight: 700 !important;
+    }
+
+    /* 5. BODY TEXT — darker for readability */
+    .text-navy-600 {
+      color: #334155 !important;
+      /* was too light, now slate-700 equivalent */
+    }
+
+    .text-navy-500 {
+      color: #475569 !important;
+      /* was too washed out */
+    }
+
+    .text-navy-400 {
+      color: #64748b !important;
+    }
+
+    /* 6. HEADING TEXT — deeper navy */
+    .text-navy-900,
+    h1.text-navy-900,
+    h2.text-navy-900,
+    h3.text-navy-900,
+    h4.text-navy-900 {
+      color: #0a1628 !important;
+    }
+
+    /* 7. CARD BACKGROUNDS — more visible separation */
+    .bg-gray-50 {
+      background-color: #f8fafc !important;
+    }
+
+    .bg-navy-50 {
+      background-color: #eef2f7 !important;
+    }
+
+    /* 8. CARD BORDERS — subtle but visible */
+    .card-hover {
+      border: 1px solid #e2e8f0 !important;
+    }
+
+    .card-hover:hover {
+      border-color: #cbd5e1 !important;
+    }
+
+    /* 9. GRAY SECTION ALTERNATE — stronger differentiation */
+    section.bg-gray-50 {
+      background-color: #f1f5f9 !important;
+    }
+
+    /* 10. FOOTER — improve all text layers */
+    footer {
+      background-color: #070e1a !important;
+      /* darker than nav-950 for depth */
+    }
+
+    footer .text-navy-300 {
+      color: #94a8cc !important;
+    }
+
+    footer .text-navy-400 {
+      color: #7a8fac !important;
+    }
+
+    footer .text-navy-500 {
+      color: #5e7390 !important;
+    }
+
+    footer .text-navy-200 {
+      color: #c8d6e8 !important;
+    }
+
+    footer .text-navy-100 {
+      color: #dce5f0 !important;
+    }
+
+    footer h4 {
+      color: #d1dae6 !important;
+    }
+
+    footer a.text-navy-400:hover {
+      color: #ffffff !important;
+    }
+
+    footer .border-white\/10 {
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    /* 11. PRODUCT CARDS — stronger category badges */
+    .product-card span.absolute.top-4 {
+      font-size: 10px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 12. BUTTONS — ensure readability */
+    .bg-brand-500 {
+      background-color: #059669 !important;
+      /* darker green for better white text contrast */
+    }
+
+    .bg-brand-500:hover {
+      background-color: #047857 !important;
+    }
+
+    .bg-navy-900 {
+      background-color: #0f1b2d !important;
+    }
+
+    .bg-navy-900:hover {
+      background-color: #0a1628 !important;
+    }
+
+    /* 13. GREEN GRADIENT TEXT — brighter so it reads */
+    .bg-gradient-to-r.from-brand-400.to-brand-300 {
+      background: linear-gradient(to right, #34d399, #6ee7b7) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+    }
+
+    /* 14. PHENORA DARK SECTION — lighter bg for contrast */
+    #page-phenora .hero-gradient,
+    .bg-navy-900.rounded-2xl,
+    .bg-navy-900.rounded-xl {
+      background-color: #122240 !important;
+    }
+
+    /* 15. ICON COLORS — consistent brand green */
+    .bg-brand-100 {
+      background-color: #d1fae5 !important;
+    }
+
+    .bg-brand-50 {
+      background-color: #ecfdf5 !important;
+    }
+
+    .text-brand-600 {
+      color: #047857 !important;
+    }
+
+    .text-brand-700 {
+      color: #065f46 !important;
+    }
+
+    /* 16. DIVIDERS / BORDERS — more visible */
+    .border-gray-100 {
+      border-color: #e2e8f0 !important;
+    }
+
+    .border-gray-200 {
+      border-color: #cbd5e1 !important;
+    }
+
+    /* 17. LEGAL PAGES — better paragraph readability */
+    .prose strong {
+      color: #0a1628 !important;
+      font-weight: 700 !important;
+    }
+
+    /* 18. MOBILE MENU — better contrast */
+    #mobileMenu a.text-navy-700 {
+      color: #1a2744 !important;
+      font-weight: 500;
+    }
+
+    #mobileMenu a.text-navy-500 {
+      color: #475569 !important;
+    }
+
+    /* 19. CTA SECTION — boost text */
+    section.bg-gradient-to-br {
+      background: linear-gradient(to bottom right,
+          #047857,
+          #065f46) !important;
+    }
+
+    /* 20. SCROLLBAR — match theme better */
+    ::-webkit-scrollbar-track {
+      background: #0f1b2d;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2d4773;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #37578e;
+    }
+
+    /* 21. BACK TO TOP — always visible shadow */
+    #backToTop {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* 22. TOAST — ensure readability */
+    .toast-success {
+      background: #047857 !important;
+      box-shadow: 0 8px 24px rgba(4, 120, 87, 0.3);
+    }
+
+    /* ============================================
+   COLOR VISIBILITY FIXES — Replace in <style> end here
+   ============================================ */
+
+    .koushik1 {
+      border: 1px solid #047857;
+      border-radius: 15px;
+    }
+
+    .koushik2 {
+      padding: 40px 60px;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-navy-900 antialiased">
+  <!-- NAVIGATION -->
+  <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <!-- <a
+            href="#home"
+            class="flex items-center gap-3 group"
+            onclick="navigateTo('home')"
+          >
+            <div
+              class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow"
+            >
+              <span class="text-white font-bold text-lg">F</span>
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="text-lg font-bold tracking-tight leading-none nav-text-color"
+                >Frezool</span
+              >
+              <span
+                class="text-[10px] font-medium tracking-widest uppercase nav-subtext-color opacity-70"
+                >Industries</span
+              >
+            </div>
+          </a> -->
+        <a href="#home" class="flex items-center gap-3 group" onclick="navigateTo('home')"> <img
+            src="https://i.postimg.cc/Bv2svt1r/Frezool-Industries-Logo-removebg-preview.png" style="width:130px;"> </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="#home" onclick="navigateTo('home')"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-navy-50">Home</a>
+          <a href="#about" onclick="navigateTo('about')"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-navy-50">About Us</a>
+          <a href="#business" onclick="navigateTo('business')"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-navy-50">Our
+            Business</a>
+          <div class="dropdown relative">
+            <button
+              class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-navy-50 flex items-center gap-1">
+              Brands <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 pt-2">
+              <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[200px]">
+                <a href="#phenora" onclick="navigateTo('phenora')"
+                  class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-brand-50 transition-colors">
+                  <div class="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-600"></i>
+                  </div>
+                  <span class="text-sm font-medium text-navy-800">Phenora</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#manufacturing" onclick="navigateTo('manufacturing')"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-navy-50">Manufacturing</a>
+          <a href="#certifications" onclick="navigateTo('certifications')"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-navy-50">Compliance</a>
+          <a href="#sustainability" onclick="navigateTo('sustainability')"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-navy-50">Sustainability</a>
+          <div class="dropdown relative">
+            <button
+              class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-navy-50 flex items-center gap-1">
+              More <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div class="dropdown-menu absolute top-full right-0 pt-2">
+              <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[220px]">
+                <a href="#careers" onclick="navigateTo('careers')"
+                  class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors">
+                  <i data-lucide="briefcase" class="w-4 h-4 text-navy-400"></i>
+                  <span class="text-sm font-medium">Careers</span>
+                </a>
+                <a href="#investors" onclick="navigateTo('investors')"
+                  class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors">
+                  <i data-lucide="bar-chart-3" class="w-4 h-4 text-navy-400"></i>
+                  <span class="text-sm font-medium">Investors</span>
+                </a>
+                <div class="border-t border-gray-100 my-1"></div>
+                <a href="#privacy" onclick="navigateTo('privacy')"
+                  class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors">
+                  <i data-lucide="shield" class="w-4 h-4 text-navy-400"></i>
+                  <span class="text-sm font-medium">Legal</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" onclick="navigateTo('contact')"
+            class="ml-3 bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 text-sm font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-brand-500/25">Contact
+            Us</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg hover:bg-navy-50 transition-colors">
+          <i data-lucide="menu" class="w-6 h-6 nav-icon-color"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileOverlay" class="mobile-overlay fixed inset-0 bg-black/40 z-50" onclick="toggleMobileMenu()"></div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu"
+    class="mobile-menu fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white z-50 overflow-y-auto shadow-2xl">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-8">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 bg-brand-500 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold">F</span>
+          </div>
+          <span class="font-bold text-navy-900">Frezool</span>
+        </div>
+        <button onclick="toggleMobileMenu()" class="p-2 rounded-lg hover:bg-gray-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="space-y-1" id="mobileNavLinks">
+        <a href="#home" onclick="
+              navigateTo('home');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Home</a>
+        <a href="#about" onclick="
+              navigateTo('about');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">About Us</a>
+        <a href="#business" onclick="
+              navigateTo('business');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Our Business</a>
+        <a href="#phenora" onclick="
+              navigateTo('phenora');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Brands —
+          Phenora</a>
+        <a href="#manufacturing" onclick="
+              navigateTo('manufacturing');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Manufacturing &
+          Quality</a>
+        <a href="#certifications" onclick="
+              navigateTo('certifications');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Certifications &
+          Compliance</a>
+        <a href="#sustainability" onclick="
+              navigateTo('sustainability');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Sustainability</a>
+        <a href="#careers" onclick="
+              navigateTo('careers');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Careers</a>
+        <a href="#investors" onclick="
+              navigateTo('investors');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Investors</a>
+        <a href="#contact" onclick="
+              navigateTo('contact');
+              toggleMobileMenu();
+            " class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Contact Us</a>
+        <div class="border-t border-gray-100 my-3 pt-3">
+          <p class="px-4 text-xs font-semibold text-navy-400 uppercase tracking-wider mb-2">
+            Legal
+          </p>
+          <a href="#privacy" onclick="
+                navigateTo('privacy');
+                toggleMobileMenu();
+              " class="block px-4 py-2.5 text-sm text-navy-500 hover:text-navy-700 hover:bg-navy-50 rounded-lg">Privacy
+            Policy</a>
+          <a href="#terms" onclick="
+                navigateTo('terms');
+                toggleMobileMenu();
+              " class="block px-4 py-2.5 text-sm text-navy-500 hover:text-navy-700 hover:bg-navy-50 rounded-lg">Terms &
+            Conditions</a>
+          <a href="#disclaimer" onclick="
+                navigateTo('disclaimer');
+                toggleMobileMenu();
+              "
+            class="block px-4 py-2.5 text-sm text-navy-500 hover:text-navy-700 hover:bg-navy-50 rounded-lg">Disclaimer</a>
+          <a href="#cookies" onclick="
+                navigateTo('cookies');
+                toggleMobileMenu();
+              " class="block px-4 py-2.5 text-sm text-navy-500 hover:text-navy-700 hover:bg-navy-50 rounded-lg">Cookie
+            Policy</a>
+        </div>
+      </div>
+      <div class="mt-8">
+        <a href="#contact" onclick="
+              navigateTo('contact');
+              toggleMobileMenu();
+            "
+          class="block w-full bg-brand-500 text-white text-center px-5 py-3 text-sm font-semibold rounded-lg">Contact
+          Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PAGE: HOME ===================== -->
+  <div id="page-home" class="page-section active">
+    <!-- Hero -->
+    <section class="hero-gradient hero-pattern relative min-h-screen flex items-center overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-20 right-20 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-10 w-72 h-72 bg-navy-400/5 rounded-full blur-3xl"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 pt-32 pb-20 relative z-10">
+        <div class="max-w-3xl">
+          <div class="section-label mb-8 reveal">
+            <span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Frezool Industries Private Limited
+          </div>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6 reveal reveal-delay-1">
+            Innovating Hygiene.<br />
+            <span class="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">Delivering
+              Trust.</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-navy-200 leading-relaxed max-w-xl mb-10 reveal reveal-delay-2">
+            An India-based FMCG manufacturing company building cleaner, safer
+            homes through science-backed hygiene and home care solutions.
+          </p>
+          <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
+            <a href="#contact" onclick="navigateTo('contact')"
+              class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 text-sm font-semibold rounded-xl transition-all hover:shadow-xl hover:shadow-brand-500/20 flex items-center gap-2">
+              Partner With Us
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#about" onclick="navigateTo('about')"
+              class="bg-white/10 hover:bg-white/15 text-white border border-white/20 px-8 py-4 text-sm font-semibold rounded-xl transition-all backdrop-blur-sm">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <!-- Hero Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-10 border-t border-white/10 reveal reveal-delay-4">
+          <div>
+            <p class="text-3xl lg:text-4xl font-bold text-white stat-counter" data-target="5">
+              0
+            </p>
+            <p class="text-sm text-navy-300 mt-1">Product Categories</p>
+          </div>
+          <div>
+            <p class="text-3xl lg:text-4xl font-bold text-white stat-counter" data-target="50">
+              0
+            </p>
+            <p class="text-sm text-navy-300 mt-1">SKUs Developed</p>
+          </div>
+          <div>
+            <p class="text-3xl lg:text-4xl font-bold text-white stat-counter" data-target="100">
+              0
+            </p>
+            <p class="text-sm text-navy-300 mt-1">% Quality Compliant</p>
+          </div>
+          <div>
+            <p class="text-3xl lg:text-4xl font-bold text-white stat-counter" data-target="10">
+              0
+            </p>
+            <p class="text-sm text-navy-300 mt-1">States Coverage</p>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        <span class="text-xs text-navy-400 tracking-widest uppercase">Scroll</span>
+        <i data-lucide="chevron-down" class="w-4 h-4 text-navy-400"></i>
+      </div>
+    </section>
+
+    <!-- Company Snapshot -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> Who We
+              Are</span>
+            <h2 class="text-3xl lg:text-4xl font-bold text-navy-900 tracking-tight mb-6">
+              Building India's Hygiene Infrastructure
+            </h2>
+            <p class="text-lg text-navy-600 leading-relaxed mb-6">
+              Frezool Industries Private Limited is a professionally managed
+              FMCG manufacturing enterprise headquartered in India. We
+              specialize in the formulation, production, and distribution of
+              hygiene and home care products that meet the highest standards
+              of safety and efficacy.
+            </p>
+            <p class="text-navy-500 leading-relaxed">
+              With a focus on institutional trust, regulatory compliance, and
+              scalable manufacturing, we serve B2B partners, distributors, and
+              institutional buyers across the country.
+            </p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-navy-50 rounded-2xl p-6 card-hover">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+                  <i data-lucide="factory" class="w-6 h-6 text-brand-600"></i>
+                </div>
+                <h4 class="font-semibold text-navy-900 mb-1">
+                  Modern Facility
+                </h4>
+                <p class="text-sm text-navy-500">
+                  State-of-the-art manufacturing unit
+                </p>
+              </div>
+              <div class="bg-navy-50 rounded-2xl p-6 card-hover">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+                  <i data-lucide="shield-check" class="w-6 h-6 text-brand-600"></i>
+                </div>
+                <h4 class="font-semibold text-navy-900 mb-1">
+                  Quality Certified
+                </h4>
+                <p class="text-sm text-navy-500">ISO compliant processes</p>
+              </div>
+              <div class="bg-navy-50 rounded-2xl p-6 card-hover">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+                  <i data-lucide="truck" class="w-6 h-6 text-brand-600"></i>
+                </div>
+                <h4 class="font-semibold text-navy-900 mb-1">
+                  Pan-India Reach
+                </h4>
+                <p class="text-sm text-navy-500">
+                  Growing distribution network
+                </p>
+              </div>
+              <div class="bg-navy-50 rounded-2xl p-6 card-hover">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+                  <i data-lucide="flask-conical" class="w-6 h-6 text-brand-600"></i>
+                </div>
+                <h4 class="font-semibold text-navy-900 mb-1">R&D Driven</h4>
+                <p class="text-sm text-navy-500">
+                  Science-backed formulations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Vertical Overview -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> Our
+            Verticals</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-navy-900 tracking-tight mb-4">
+            Diverse Hygiene Solutions
+          </h2>
+          <p class="text-navy-500">
+            From formulation to distribution, we cover the complete value
+            chain in home care manufacturing.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 card-hover reveal reveal-delay-1 border border-gray-100">
+            <div class="w-14 h-14 bg-navy-900 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="home" class="w-7 h-7 text-brand-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">Home Care</h3>
+            <p class="text-navy-500 leading-relaxed mb-4">
+              Complete range of floor cleaners, surface cleaners, and bathroom
+              hygiene solutions for modern Indian homes.
+            </p>
+            <a href="#business" onclick="navigateTo('business')"
+              class="text-brand-600 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">Learn more
+              <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+          <div class="bg-white rounded-2xl p-8 card-hover reveal reveal-delay-2 border border-gray-100">
+            <div class="w-14 h-14 bg-navy-900 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="spray-can" class="w-7 h-7 text-brand-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Cleaning Solutions
+            </h3>
+            <p class="text-navy-500 leading-relaxed mb-4">
+              Specialized cleaning products including glass cleaners,
+              disinfectants, and multi-surface formulations.
+            </p>
+            <a href="#business" onclick="navigateTo('business')"
+              class="text-brand-600 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">Learn more
+              <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+          <div class="bg-white rounded-2xl p-8 card-hover reveal reveal-delay-3 border border-gray-100">
+            <div class="w-14 h-14 bg-navy-900 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="hand-metal" class="w-7 h-7 text-brand-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Personal Hygiene
+            </h3>
+            <p class="text-navy-500 leading-relaxed mb-4">
+              Hand wash and sanitization products designed for
+              health-conscious consumers and institutional buyers.
+            </p>
+            <a href="#business" onclick="navigateTo('business')"
+              class="text-brand-600 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">Learn more
+              <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phenora Brand Highlight -->
+    <section class="py-24 bg-navy-900 relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-500/10 to-transparent"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <div
+              class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-6">
+              <i data-lucide="sparkles" class="w-4 h-4 text-brand-400"></i>
+              <span class="text-sm font-medium text-white/80">Our Flagship Brand</span>
+            </div>
+            <h2 class="text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6">
+              Phenora
+            </h2>
+            <p class="text-lg text-navy-200 leading-relaxed mb-8">
+              Phenora is our home care brand built on the promise of
+              effective, accessible hygiene. From phenyl to hand wash, every
+              Phenora product is crafted with care and backed by quality.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-8">
+              <span
+                class="bg-white/10 text-white/80 text-sm px-4 py-2 rounded-full border border-white/10">Phenyl</span>
+              <span class="bg-white/10 text-white/80 text-sm px-4 py-2 rounded-full border border-white/10">Toilet
+                Cleaner</span>
+              <span class="bg-white/10 text-white/80 text-sm px-4 py-2 rounded-full border border-white/10">Glass
+                Cleaner</span>
+              <span class="bg-white/10 text-white/80 text-sm px-4 py-2 rounded-full border border-white/10">Surface
+                Cleaner</span>
+              <span class="bg-white/10 text-white/80 text-sm px-4 py-2 rounded-full border border-white/10">Hand
+                Wash</span>
+            </div>
+            <a href="#phenora" onclick="navigateTo('phenora')"
+              class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-6 py-3.5 text-sm font-semibold rounded-xl transition-all hover:shadow-xl hover:shadow-brand-500/20">
+              Explore Phenora
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <div class="reveal reveal-delay-2 flex justify-center">
+            <div class="relative">
+              <div
+                class="w-72 h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-brand-500/20 to-brand-600/10 rounded-3xl border border-brand-500/20 flex items-center justify-center float-animation">
+                <div class="text-center">
+                  <div class="text-6xl lg:text-7xl font-extrabold text-white mb-2">
+                    P
+                  </div>
+                  <div class="text-lg font-semibold text-brand-300 tracking-widest uppercase">
+                    Phenora
+                  </div>
+                  <div class="text-sm text-navy-300 mt-1">
+                    Home Care Solutions
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute -top-4 -right-4 w-16 h-16 bg-brand-500/20 rounded-2xl border border-brand-500/20 flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-7 h-7 text-brand-400"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manufacturing & Quality Highlights -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Manufacturing</span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-navy-900 tracking-tight mb-4">
+            Quality at Every Step
+          </h2>
+          <p class="text-navy-500">
+            Our manufacturing processes are designed to deliver consistency,
+            safety, and scalability.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="koushik1 text-center p-6 reveal reveal-delay-1">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="settings" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900 mb-2">Automated Lines</h4>
+            <p class="text-sm text-navy-500">
+              Semi-automated filling & packaging
+            </p>
+          </div>
+          <div class="koushik1 text-center p-6 reveal reveal-delay-2">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="microscope" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900 mb-2">Lab Testing</h4>
+            <p class="text-sm text-navy-500">
+              In-house quality assurance lab
+            </p>
+          </div>
+          <div class="koushik1 text-center p-6 reveal reveal-delay-3">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="clipboard-check" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900 mb-2">Batch Tracking</h4>
+            <p class="text-sm text-navy-500">
+              Full traceability from raw to finished
+            </p>
+          </div>
+          <div class="koushik1 text-center p-6 reveal reveal-delay-4">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="award" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900 mb-2">
+              Certified Standards
+            </h4>
+            <p class="text-sm text-navy-500">ISO & regulatory compliant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Preview -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Compliance</span>
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-4">
+            Certifications & Standards
+          </h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 reveal reveal-delay-1">
+          <div class="koushik2 cert-badge bg-white rounded-2xl p-6 text-center border border-gray-100 min-w-[140px]">
+            <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <span class="text-brand-400 font-bold text-xs">ISO</span>
+            </div>
+            <p class="text-sm font-semibold text-navy-900">ISO 9001</p>
+            <p class="text-xs text-navy-400 mt-1">Quality</p>
+          </div>
+          <div class="koushik2 cert-badge bg-white rounded-2xl p-6 text-center border border-gray-100 min-w-[140px]">
+            <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <span class="text-brand-400 font-bold text-xs">ISO</span>
+            </div>
+            <p class="text-sm font-semibold text-navy-900">ISO 14001</p>
+            <p class="text-xs text-navy-400 mt-1">Environment</p>
+          </div>
+          <div class="koushik2 cert-badge bg-white rounded-2xl p-6 text-center border border-gray-100 min-w-[140px]">
+            <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="file-badge" class="w-6 h-6 text-brand-400"></i>
+            </div>
+            <p class="text-sm font-semibold text-navy-900">MSME</p>
+            <p class="text-xs text-navy-400 mt-1">Udyam Registered</p>
+          </div>
+          <div class="koushik2 cert-badge bg-white rounded-2xl p-6 text-center border border-gray-100 min-w-[140px]">
+            <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="shield" class="w-6 h-6 text-brand-400"></i>
+            </div>
+            <p class="text-sm font-semibold text-navy-900">GST</p>
+            <p class="text-xs text-navy-400 mt-1">Registered</p>
+          </div>
+          <div class="koushik2 cert-badge bg-white rounded-2xl p-6 text-center border border-gray-100 min-w-[140px]">
+            <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="leaf" class="w-6 h-6 text-brand-400"></i>
+            </div>
+            <p class="text-sm font-semibold text-navy-900">PCB</p>
+            <p class="text-xs text-navy-400 mt-1">Compliance</p>
+          </div>
+        </div>
+        <div class="text-center mt-10 reveal reveal-delay-2">
+          <a href="#certifications" onclick="navigateTo('certifications')"
+            class="text-brand-600 text-sm font-semibold flex items-center gap-1 mx-auto hover:gap-2 transition-all">View
+            all certifications
+            <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 reveal">
+            <div class="space-y-6">
+              <div class="flex gap-5">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 mb-1">
+                    Regulatory Compliant
+                  </h4>
+                  <p class="text-sm text-navy-500">
+                    Fully compliant with all applicable Indian manufacturing,
+                    environmental, and safety regulations.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-5">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 mb-1">
+                    Scalable Production
+                  </h4>
+                  <p class="text-sm text-navy-500">
+                    Capacity to scale operations for large institutional
+                    orders and distribution requirements.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-5">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 mb-1">
+                    Transparent Operations
+                  </h4>
+                  <p class="text-sm text-navy-500">
+                    Complete documentation, batch traceability, and open
+                    compliance records for partner confidence.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-5">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 mb-1">
+                    Partner-First Approach
+                  </h4>
+                  <p class="text-sm text-navy-500">
+                    Flexible engagement models including contract
+                    manufacturing and private label partnerships.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 reveal reveal-delay-2">
+            <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> Why
+              Frezool</span>
+            <h2 class="text-3xl lg:text-4xl font-bold text-navy-900 tracking-tight mb-6">
+              Built on Trust, Driven by Quality
+            </h2>
+            <p class="text-navy-500 leading-relaxed mb-8">
+              We understand that in the FMCG space, trust is everything. Every
+              product that leaves our facility carries the Frezool promise of
+              safety, efficacy, and regulatory integrity.
+            </p>
+            <a href="#contact" onclick="navigateTo('contact')"
+              class="inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white px-6 py-3.5 text-sm font-semibold rounded-xl transition-all">
+              Start a Conversation
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-gradient-to-br from-brand-600 to-brand-700 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 left-10 w-40 h-40 border border-white rounded-full"></div>
+        <div class="absolute bottom-10 right-10 w-60 h-60 border border-white rounded-full"></div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-white rounded-full">
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 class="text-3xl lg:text-5xl font-bold text-white tracking-tight mb-6">
+          Ready to Partner with Frezool?
+        </h2>
+        <p class="text-lg text-brand-100 mb-10 max-w-2xl mx-auto">
+          Whether you're a distributor, institutional buyer, or looking for
+          contract manufacturing — we'd love to hear from you.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#contact" onclick="navigateTo('contact')"
+            class="bg-white text-brand-700 hover:bg-gray-50 px-8 py-4 text-sm font-bold rounded-xl transition-all shadow-lg">Contact
+            Us</a>
+          <a href="#business" onclick="navigateTo('business')"
+            class="bg-white/15 hover:bg-white/20 text-white border border-white/25 px-8 py-4 text-sm font-semibold rounded-xl transition-all backdrop-blur-sm">Explore
+            Our Business</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: ABOUT US ===================== -->
+  <div id="page-about" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> About
+            Us</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Our Story, Our Purpose
+          </h1>
+          <p class="text-lg text-navy-200">
+            From a vision to make quality hygiene accessible, to a growing
+            manufacturing enterprise serving India.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-4xl mx-auto reveal">
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+            Company Overview
+          </h2>
+          <p class="text-navy-600 leading-relaxed mb-6">
+            Frezool Industries Private Limited was established with a singular
+            mission: to manufacture and deliver hygiene and home care products
+            that Indian families and institutions can trust completely. As a
+            private limited company registered under the Companies Act, 2013,
+            we operate with full corporate governance, regulatory compliance,
+            and professional management.
+          </p>
+          <p class="text-navy-600 leading-relaxed mb-6">
+            Our operations encompass the complete manufacturing value chain —
+            from raw material sourcing and formulation development to
+            production, quality testing, and distribution logistics. We are
+            not just a factory; we are a systems-driven organization built for
+            reliability and scale.
+          </p>
+          <p class="text-navy-600 leading-relaxed">
+            Headquartered in India, Frezool Industries serves a growing
+            network of distributors, institutional buyers, and brand partners
+            across multiple states, with ambitions to become a recognized name
+            in the Indian FMCG manufacturing landscape.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl p-10 border border-gray-100 card-hover reveal">
+            <div class="w-14 h-14 bg-navy-900 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="eye" class="w-7 h-7 text-brand-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Our Vision</h3>
+            <p class="text-navy-600 leading-relaxed">
+              To become one of India's most trusted and respected FMCG
+              manufacturing companies, known for uncompromising quality,
+              regulatory excellence, and meaningful contribution to the
+              hygiene and home care sector.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-10 border border-gray-100 card-hover reveal reveal-delay-2">
+            <div class="w-14 h-14 bg-brand-500 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="target" class="w-7 h-7 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Our Mission</h3>
+            <p class="text-navy-600 leading-relaxed">
+              To manufacture and distribute high-quality hygiene and home care
+              products through ethical business practices, robust quality
+              systems, and sustainable operations — while creating value for
+              our partners, employees, and stakeholders.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Values</span>
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight">
+            What We Stand For
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center p-6 reveal reveal-delay-1">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="shield-check" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900 mb-2">Integrity</h4>
+            <p class="text-sm text-navy-500">
+              Transparent, honest, and ethical in every interaction.
+            </p>
+          </div>
+          <div class="text-center p-6 reveal reveal-delay-2">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="gem" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900 mb-2">Quality</h4>
+            <p class="text-sm text-navy-500">
+              Never compromise on product safety and efficacy.
+            </p>
+          </div>
+          <div class="text-center p-6 reveal reveal-delay-3">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="lightbulb" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900 mb-2">Innovation</h4>
+            <p class="text-sm text-navy-500">
+              Continuously improve through research and development.
+            </p>
+          </div>
+          <div class="text-center p-6 reveal reveal-delay-4">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="users" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900 mb-2">Responsibility</h4>
+            <p class="text-sm text-navy-500">
+              Accountable to people, planet, and partners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founding Story -->
+    <section class="py-24 bg-navy-900 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <span
+            class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-8">
+            <i data-lucide="book-open" class="w-4 h-4 text-brand-400"></i>
+            <span class="text-sm font-medium text-white/80">Our Journey</span>
+          </span>
+          <h2 class="text-3xl lg:text-4xl font-bold text-white tracking-tight mb-8">
+            The Founding Story
+          </h2>
+          <div class="text-left space-y-6">
+            <p class="text-navy-200 leading-relaxed">
+              Frezool Industries was born from a simple observation: millions
+              of Indian households deserve access to hygiene products that are
+              not just affordable, but truly effective and safe. The gap
+              between premium imported brands and unorganized local
+              manufacturers presented an opportunity — to build a
+              professional, systems-driven manufacturing company that could
+              bridge this gap.
+            </p>
+            <p class="text-navy-200 leading-relaxed">
+              With deep domain knowledge in chemical formulation and a
+              commitment to regulatory compliance, the founders set out to
+              create an organization that would earn trust not through
+              marketing noise, but through manufacturing excellence and
+              corporate transparency.
+            </p>
+            <p class="text-navy-200 leading-relaxed">
+              From setting up the first production line with stringent quality
+              protocols, to launching the Phenora brand as a showcase of our
+              capabilities, every step has been guided by the principle of
+              doing things right — even when no one is watching.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Leadership</span>
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight">
+            Our Leadership
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div class="text-center reveal reveal-delay-1">
+            <div class="w-32 h-32 bg-navy-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <i data-lucide="user" class="w-12 h-12 text-navy-300"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900">Director</h4>
+            <p class="text-sm text-navy-400">Managing Director</p>
+          </div>
+          <div class="text-center reveal reveal-delay-2">
+            <div class="w-32 h-32 bg-navy-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <i data-lucide="user" class="w-12 h-12 text-navy-300"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900">Director</h4>
+            <p class="text-sm text-navy-400">Director — Operations</p>
+          </div>
+          <div class="text-center reveal reveal-delay-3">
+            <div class="w-32 h-32 bg-navy-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <i data-lucide="user" class="w-12 h-12 text-navy-300"></i>
+            </div>
+            <h4 class="font-semibold text-navy-900">Head of Quality</h4>
+            <p class="text-sm text-navy-400">Quality Assurance</p>
+          </div>
+        </div>
+        <p class="text-center text-sm text-navy-400 mt-8 reveal">
+          Leadership details to be updated as per company disclosure policy.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: OUR BUSINESS ===================== -->
+  <div id="page-business" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> Our
+            Business</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            FMCG Manufacturing Excellence
+          </h1>
+          <p class="text-lg text-navy-200">
+            Comprehensive home care manufacturing capabilities built on
+            quality, compliance, and scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-4xl mx-auto reveal">
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+            Manufacturing Overview
+          </h2>
+          <p class="text-navy-600 leading-relaxed mb-6">
+            Frezool Industries operates as a full-spectrum FMCG manufacturer
+            specializing in hygiene and home care products. Our manufacturing
+            infrastructure is designed to handle liquid, gel, and paste
+            formulations across multiple product categories with consistent
+            quality output.
+          </p>
+          <p class="text-navy-600 leading-relaxed">
+            We serve multiple business channels — from our own branded
+            products under Phenora, to contract manufacturing and private
+            label solutions for institutional and retail partners.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Categories</span>
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight">
+            Product Categories
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover reveal reveal-delay-1">
+            <div class="h-48 bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center">
+              <i data-lucide="droplets" class="w-16 h-16 text-brand-400 opacity-60"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 mb-2">Home Care</h3>
+              <p class="text-sm text-navy-500 leading-relaxed">
+                Floor cleaners, bathroom cleaners, and household disinfectant
+                solutions for daily hygiene maintenance.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover reveal reveal-delay-2">
+            <div class="h-48 bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center">
+              <i data-lucide="sparkles" class="w-16 h-16 text-brand-400 opacity-60"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 mb-2">
+                Cleaning Solutions
+              </h3>
+              <p class="text-sm text-navy-500 leading-relaxed">
+                Glass cleaners, surface cleaners, and specialized cleaning
+                formulations for commercial and domestic use.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover reveal reveal-delay-3">
+            <div class="h-48 bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center">
+              <i data-lucide="hand-metal" class="w-16 h-16 text-brand-400 opacity-60"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 mb-2">
+                Personal Hygiene
+              </h3>
+              <p class="text-sm text-navy-500 leading-relaxed">
+                Hand wash liquids and sanitization products for
+                health-conscious consumers and institutional deployment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Capabilities</span>
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight">
+            Business Capabilities
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-navy-50 rounded-2xl p-8 reveal reveal-delay-1">
+            <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="factory" class="w-6 h-6 text-brand-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Contract Manufacturing
+            </h3>
+            <p class="text-sm text-navy-500 leading-relaxed mb-4">
+              We offer end-to-end contract manufacturing services for brands
+              looking for reliable production partners. From formulation to
+              packaging, we handle it all.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Custom formulations
+              </li>
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Flexible batch sizes
+              </li>
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Quality documentation
+              </li>
+            </ul>
+          </div>
+          <div class="bg-navy-50 rounded-2xl p-8 reveal reveal-delay-2">
+            <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="tag" class="w-6 h-6 text-brand-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Private Labeling
+            </h3>
+            <p class="text-sm text-navy-500 leading-relaxed mb-4">
+              Launch your own brand with our manufacturing backend. We provide
+              complete private label solutions with full regulatory support.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Brand-customized packaging
+              </li>
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Regulatory documentation
+              </li>
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Confidentiality assured
+              </li>
+            </ul>
+          </div>
+          <div class="bg-navy-50 rounded-2xl p-8 reveal reveal-delay-3">
+            <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="network" class="w-6 h-6 text-brand-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Distribution Network
+            </h3>
+            <p class="text-sm text-navy-500 leading-relaxed mb-4">
+              Our growing distribution network ensures products reach markets
+              efficiently across multiple Indian states.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Multi-state coverage
+              </li>
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Warehouse support
+              </li>
+              <li class="flex items-center gap-2 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                Logistics partnerships
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: PHENORA BRAND ===================== -->
+  <div id="page-phenora" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <div class="inline-flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-xl">P</span>
+            </div>
+            <span class="section-label"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> Brand
+              Showcase</span>
+          </div>
+          <h1 class="text-4xl lg:text-6xl font-extrabold text-white tracking-tight mb-4">
+            Phenora
+          </h1>
+          <p class="text-xl text-navy-200">
+            Premium home care solutions for the modern Indian home.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Introduction -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+              Clean Homes, Happy Lives
+            </h2>
+            <p class="text-navy-600 leading-relaxed mb-6">
+              Phenora is Frezool Industries' flagship home care brand —
+              conceived to deliver effective, safe, and pleasantly formulated
+              cleaning products to Indian households. Every Phenora product is
+              the result of careful formulation, rigorous testing, and a deep
+              understanding of Indian cleaning needs.
+            </p>
+            <p class="text-navy-600 leading-relaxed">
+              The brand represents our commitment to bringing world-class
+              hygiene solutions to everyday consumers at accessible price
+              points, without ever compromising on quality or safety.
+            </p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="bg-brand-50 rounded-3xl p-10 border border-brand-100">
+              <h4 class="font-semibold text-navy-900 mb-4 text-lg">
+                Brand Philosophy
+              </h4>
+              <div class="space-y-4">
+                <div class="flex gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0"></i>
+                  <p class="text-sm text-navy-600">
+                    Effectiveness first — products must deliver real cleaning
+                    power
+                  </p>
+                </div>
+                <div class="flex gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0"></i>
+                  <p class="text-sm text-navy-600">
+                    Safety always — formulations tested for user and
+                    environmental safety
+                  </p>
+                </div>
+                <div class="flex gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0"></i>
+                  <p class="text-sm text-navy-600">
+                    Accessible pricing — premium quality doesn't mean premium
+                    pricing
+                  </p>
+                </div>
+                <div class="flex gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0"></i>
+                  <p class="text-sm text-navy-600">
+                    Indian-first design — made for Indian homes, Indian water,
+                    Indian conditions
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Display -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> Product
+            Range</span>
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight">
+            Phenora Products
+          </h2>
+          <p class="text-navy-500 mt-3">
+            Products displayed are for informational purposes only.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover reveal reveal-delay-1">
+            <div class="h-56 bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center relative">
+              <div
+                class="w-32 h-40 bg-gradient-to-b from-brand-400 to-brand-600 rounded-lg flex items-center justify-center shadow-lg">
+                <i data-lucide="droplets" class="w-12 h-12 text-white/80"></i>
+              </div>
+              <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Home
+                Care</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 mb-1">
+                Phenora Phenyl
+              </h3>
+              <p class="text-sm text-navy-500">
+                Powerful floor cleaning phenyl with long-lasting fragrance and
+                germ-killing formulation.
+              </p>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover reveal reveal-delay-2">
+            <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center relative">
+              <div
+                class="w-24 h-40 bg-gradient-to-b from-blue-400 to-blue-600 rounded-lg flex items-center justify-center shadow-lg">
+                <i data-lucide="bath" class="w-10 h-10 text-white/80"></i>
+              </div>
+              <span
+                class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">Bathroom</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 mb-1">
+                Phenora Toilet Cleaner
+              </h3>
+              <p class="text-sm text-navy-500">
+                Thick formula toilet cleaner with deep stain removal and
+                disinfectant properties.
+              </p>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover reveal reveal-delay-3">
+            <div class="h-56 bg-gradient-to-br from-sky-50 to-indigo-50 flex items-center justify-center relative">
+              <div
+                class="w-20 h-36 bg-gradient-to-b from-sky-400 to-sky-600 rounded-lg flex items-center justify-center shadow-lg">
+                <i data-lucide="scan-line" class="w-10 h-10 text-white/80"></i>
+              </div>
+              <span
+                class="absolute top-4 left-4 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-full">Glass</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 mb-1">
+                Phenora Glass Cleaner
+              </h3>
+              <p class="text-sm text-navy-500">
+                Streak-free glass and surface cleaner for crystal-clear shine
+                on all glass surfaces.
+              </p>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover reveal reveal-delay-1">
+            <div class="h-56 bg-gradient-to-br from-violet-50 to-purple-50 flex items-center justify-center relative">
+              <div
+                class="w-28 h-36 bg-gradient-to-b from-violet-400 to-violet-600 rounded-lg flex items-center justify-center shadow-lg">
+                <i data-lucide="square-slash" class="w-10 h-10 text-white/80"></i>
+              </div>
+              <span
+                class="absolute top-4 left-4 bg-violet-500 text-white text-xs font-bold px-3 py-1 rounded-full">Multi-Surface</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 mb-1">
+                Phenora Surface Cleaner
+              </h3>
+              <p class="text-sm text-navy-500">
+                Multi-surface cleaner for kitchens, tables, and everyday
+                surfaces with antibacterial action.
+              </p>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover reveal reveal-delay-2">
+            <div class="h-56 bg-gradient-to-br from-rose-50 to-pink-50 flex items-center justify-center relative">
+              <div
+                class="w-24 h-36 bg-gradient-to-b from-rose-400 to-rose-600 rounded-lg flex items-center justify-center shadow-lg">
+                <i data-lucide="hand-metal" class="w-10 h-10 text-white/80"></i>
+              </div>
+              <span
+                class="absolute top-4 left-4 bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hygiene</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 mb-1">
+                Phenora Hand Wash
+              </h3>
+              <p class="text-sm text-navy-500">
+                Gentle yet effective hand wash with moisturizing formula for
+                everyday hand hygiene.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 text-center reveal">
+          <div class="bg-navy-900 rounded-2xl p-10 max-w-2xl mx-auto">
+            <i data-lucide="shopping-bag" class="w-10 h-10 text-brand-400 mx-auto mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">
+              D2C Platform Coming Soon
+            </h3>
+            <p class="text-navy-300 text-sm mb-6">
+              Phenora products will soon be available for direct purchase
+              online. Stay tuned for updates.
+            </p>
+            <a href="#contact" onclick="navigateTo('contact')"
+              class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 text-sm font-semibold rounded-lg transition-all">Get
+              Notified <i data-lucide="bell" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <p class="text-center text-xs text-navy-400 mt-8 reveal">
+          Disclaimer: Products displayed are for informational purposes only.
+          No transactions are facilitated on this website.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: MANUFACTURING & QUALITY ===================== -->
+  <div id="page-manufacturing" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Manufacturing</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Manufacturing & Quality
+          </h1>
+          <p class="text-lg text-navy-200">
+            Where precision meets purpose — inside our manufacturing
+            ecosystem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div class="reveal">
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+              Manufacturing Capabilities
+            </h2>
+            <p class="text-navy-600 leading-relaxed mb-8">
+              Our manufacturing facility is equipped with modern machinery for
+              liquid filling, mixing, blending, and packaging. We maintain
+              clean room standards in critical production zones and follow
+              standard operating procedures at every stage.
+            </p>
+            <div class="space-y-4">
+              <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="settings" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Semi-Automated Production Lines
+                  </h4>
+                  <p class="text-xs text-navy-500 mt-1">
+                    Consistent output with minimal manual intervention
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="package" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Flexible Packaging Options
+                  </h4>
+                  <p class="text-xs text-navy-500 mt-1">
+                    Bottles, pouches, cans — multiple SKUs supported
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="warehouse" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Warehouse & Logistics
+                  </h4>
+                  <p class="text-xs text-navy-500 mt-1">
+                    Organized storage with FIFO inventory management
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="capacity" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Scalable Capacity
+                  </h4>
+                  <p class="text-xs text-navy-500 mt-1">
+                    Designed to scale for seasonal and institutional demand
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+              Quality Control
+            </h2>
+            <p class="text-navy-600 leading-relaxed mb-8">
+              Quality is not a department at Frezool — it's a culture. Our QA
+              processes start from raw material inspection and continue
+              through every stage until the finished product is dispatched.
+            </p>
+            <div class="space-y-4">
+              <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-navy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="flask-conical" class="w-5 h-5 text-navy-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    In-House Testing Lab
+                  </h4>
+                  <p class="text-xs text-navy-500 mt-1">
+                    pH, viscosity, stability, and microbial testing
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-navy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="clipboard-list" class="w-5 h-5 text-navy-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Batch Documentation
+                  </h4>
+                  <p class="text-xs text-navy-500 mt-1">
+                    Complete batch records with full traceability
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-navy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="search-check" class="w-5 h-5 text-navy-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Incoming Material Inspection
+                  </h4>
+                  <p class="text-xs text-navy-500 mt-1">
+                    Every raw material tested before approval
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-navy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="file-check" class="w-5 h-5 text-navy-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Final Product Release
+                  </h4>
+                  <p class="text-xs text-navy-500 mt-1">
+                    No product shipped without QA sign-off
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hygiene & Safety + R&D -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl p-10 border border-gray-100 card-hover reveal">
+            <div class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="hard-hat" class="w-7 h-7 text-brand-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">
+              Hygiene & Safety Standards
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Production area hygiene
+                protocols including gowning and
+                sanitation
+              </li>
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Worker safety training
+                and PPE compliance
+              </li>
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Hazard identification and
+                risk assessment (HIRA)
+              </li>
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Chemical handling and
+                storage safety measures
+              </li>
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Emergency response
+                procedures in place
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-2xl p-10 border border-gray-100 card-hover reveal reveal-delay-2">
+            <div class="w-14 h-14 bg-navy-900 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="flask-conical" class="w-7 h-7 text-brand-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">
+              R&D Capabilities
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Formulation development
+                for new products
+              </li>
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Stability testing and
+                shelf-life validation
+              </li>
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Custom formulation for
+                B2B partners
+              </li>
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Continuous improvement of
+                existing formulations
+              </li>
+              <li class="flex items-start gap-3 text-sm text-navy-600">
+                <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Benchmarking against
+                industry standards
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: CERTIFICATIONS & COMPLIANCE ===================== -->
+  <div id="page-certifications" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Compliance</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Certifications & Compliance
+          </h1>
+          <p class="text-lg text-navy-200">
+            Full transparency on our regulatory standing, certifications, and
+            legal registrations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Registration Details -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="reveal">
+            <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> Legal
+              Identity</span>
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-8">
+              Company Registration Details
+            </h2>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 reveal reveal-delay-1">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                  Company Name
+                </p>
+                <p class="text-navy-900 font-medium">
+                  Frezool Industries Private Limited
+                </p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                  CIN Number
+                </p>
+                <p class="text-navy-900 font-medium font-mono">
+                  U20231UP2025PTC236832
+                </p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                  GST Identification Number
+                </p>
+                <p class="text-navy-900 font-medium font-mono">
+                  XX XXXXX XXXX X1ZX
+                </p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                  Udyam Registration (MSME)
+                </p>
+                <p class="text-navy-900 font-medium font-mono">
+                  UDYAM-XX-XX-XXXXXXX
+                </p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                  Company Type
+                </p>
+                <p class="text-navy-900 font-medium">
+                  Private Limited Company
+                </p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                  Registered Under
+                </p>
+                <p class="text-navy-900 font-medium">Companies Act, 2013</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-navy-400 mt-4 reveal reveal-delay-2">
+            * Some registration numbers shown as placeholders and will be
+            updated with actual values.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Grid -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Certifications</span>
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight">
+            Our Certifications
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 cert-badge reveal reveal-delay-1">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-brand-400 font-bold text-sm">ISO</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-navy-900">ISO 9001:2015</h4>
+                <p class="text-xs text-navy-400">Quality Management System</p>
+              </div>
+            </div>
+            <p class="text-sm text-navy-500">
+              Certified quality management system ensuring consistent product
+              quality and continuous improvement.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 cert-badge reveal reveal-delay-2">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-brand-400 font-bold text-sm">ISO</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-navy-900">ISO 14001:2015</h4>
+                <p class="text-xs text-navy-400">Environmental Management</p>
+              </div>
+            </div>
+            <p class="text-sm text-navy-500">
+              Environmental management system certification demonstrating our
+              commitment to sustainable operations.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 cert-badge reveal reveal-delay-3">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="file-badge" class="w-6 h-6 text-brand-400"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-navy-900">MSME Registration</h4>
+                <p class="text-xs text-navy-400">Udyam Registered</p>
+              </div>
+            </div>
+            <p class="text-sm text-navy-500">
+              Registered under the Ministry of Micro, Small & Medium
+              Enterprises, Government of India.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 cert-badge reveal reveal-delay-1">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield" class="w-6 h-6 text-brand-400"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-navy-900">GST Compliance</h4>
+                <p class="text-xs text-navy-400">Goods & Services Tax</p>
+              </div>
+            </div>
+            <p class="text-sm text-navy-500">
+              Fully GST compliant with regular filings and transparent tax
+              documentation.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 cert-badge reveal reveal-delay-2">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="leaf" class="w-6 h-6 text-brand-400"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-navy-900">Pollution Control</h4>
+                <p class="text-xs text-navy-400">State PCB Compliance</p>
+              </div>
+            </div>
+            <p class="text-sm text-navy-500">
+              Compliant with State Pollution Control Board norms for
+              manufacturing emissions and effluent discharge.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 border border-gray-100 cert-badge reveal reveal-delay-3">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 bg-navy-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="hard-hat" class="w-6 h-6 text-brand-400"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-navy-900">Safety Standards</h4>
+                <p class="text-xs text-navy-400">
+                  Factory & Workplace Safety
+                </p>
+              </div>
+            </div>
+            <p class="text-sm text-navy-500">
+              Adherence to Factories Act, 1948 and workplace safety
+              regulations including fire safety and chemical handling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Downloads -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Downloads</span>
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-4">
+            Document Downloads
+          </h2>
+          <p class="text-navy-500 mb-10">
+            Download official company documents for verification and due
+            diligence purposes.
+          </p>
+          <div class="space-y-3 text-left max-w-lg mx-auto">
+            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <div class="flex items-center gap-3">
+                <i data-lucide="file-text" class="w-5 h-5 text-navy-400"></i><span
+                  class="text-sm font-medium text-navy-900">Certificate of Incorporation</span>
+              </div>
+              <span class="text-xs text-brand-600 font-semibold bg-brand-50 px-3 py-1 rounded-full">PDF</span>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <div class="flex items-center gap-3">
+                <i data-lucide="file-text" class="w-5 h-5 text-navy-400"></i><span
+                  class="text-sm font-medium text-navy-900">GST Registration Certificate</span>
+              </div>
+              <span class="text-xs text-brand-600 font-semibold bg-brand-50 px-3 py-1 rounded-full">PDF</span>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <div class="flex items-center gap-3">
+                <i data-lucide="file-text" class="w-5 h-5 text-navy-400"></i><span
+                  class="text-sm font-medium text-navy-900">Udyam Registration Certificate</span>
+              </div>
+              <span class="text-xs text-brand-600 font-semibold bg-brand-50 px-3 py-1 rounded-full">PDF</span>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <div class="flex items-center gap-3">
+                <i data-lucide="file-text" class="w-5 h-5 text-navy-400"></i><span
+                  class="text-sm font-medium text-navy-900">ISO Certificate</span>
+              </div>
+              <span class="text-xs text-brand-600 font-semibold bg-brand-50 px-3 py-1 rounded-full">PDF</span>
+            </div>
+          </div>
+          <p class="text-xs text-navy-400 mt-6">
+            Documents will be made available upon request. Contact us for
+            verified copies.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: SUSTAINABILITY ===================== -->
+  <div id="page-sustainability" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Sustainability</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Responsible Manufacturing
+          </h1>
+          <p class="text-lg text-navy-200">
+            Our commitment to the environment, our people, and future
+            generations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto mb-16 reveal">
+          <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+            Environmental Responsibility
+          </h2>
+          <p class="text-navy-600 leading-relaxed">
+            At Frezool Industries, we recognize that manufacturing has an
+            environmental footprint — and we take that responsibility
+            seriously. Our sustainability approach is practical, measurable,
+            and integrated into our daily operations rather than being a mere
+            marketing statement.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 rounded-2xl p-8 reveal reveal-delay-1">
+            <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="flask-conical" class="w-6 h-6 text-brand-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Safe Chemical Usage
+            </h3>
+            <p class="text-sm text-navy-500 leading-relaxed">
+              We prioritize formulations that use chemicals approved by
+              relevant Indian regulatory bodies. Raw materials are sourced
+              from certified suppliers with proper MSDS documentation. We
+              avoid restricted substances and continuously explore bio-based
+              alternatives.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-8 reveal reveal-delay-2">
+            <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="recycle" class="w-6 h-6 text-brand-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Waste Management
+            </h3>
+            <p class="text-sm text-navy-500 leading-relaxed">
+              Our waste management practices include segregation of hazardous
+              and non-hazardous waste, proper disposal through authorized
+              agencies, and efforts to minimize production waste through
+              process optimization and recycling where feasible.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-8 reveal reveal-delay-3">
+            <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="droplets" class="w-6 h-6 text-brand-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Water & Energy
+            </h3>
+            <p class="text-sm text-navy-500 leading-relaxed">
+              We monitor water consumption and effluent discharge as per PCB
+              norms. Energy-efficient machinery and optimized production
+              scheduling help reduce our carbon footprint per unit of output.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-8 reveal reveal-delay-4">
+            <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="target" class="w-6 h-6 text-brand-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">
+              Sustainability Goals
+            </h3>
+            <p class="text-sm text-navy-500 leading-relaxed">
+              We are working towards measurable sustainability targets
+              including reduced packaging waste, increased use of recyclable
+              materials, and achieving zero liquid discharge capability in the
+              medium term.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: CAREERS ===================== -->
+  <div id="page-careers" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Careers</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Join the Frezool Team
+          </h1>
+          <p class="text-lg text-navy-200">
+            Build your career with a growing FMCG manufacturing company.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div class="reveal">
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+              Work Culture
+            </h2>
+            <p class="text-navy-600 leading-relaxed mb-6">
+              At Frezool Industries, we believe that a great company is built
+              by great people. Our work culture emphasizes professionalism,
+              mutual respect, continuous learning, and ownership.
+            </p>
+            <div class="space-y-4 mb-10">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="trending-up" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Growth Opportunities
+                  </h4>
+                  <p class="text-xs text-navy-500">
+                    Clear career paths in manufacturing, quality, sales, and
+                    operations
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Learning & Development
+                  </h4>
+                  <p class="text-xs text-navy-500">
+                    Training programs and skill development initiatives
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="heart-handshake" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Inclusive Environment
+                  </h4>
+                  <p class="text-xs text-navy-500">
+                    Equal opportunity workplace with fair policies
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="shield-check" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-navy-900 text-sm">
+                    Safe Workplace
+                  </h4>
+                  <p class="text-xs text-navy-500">
+                    Compliant, safe, and well-maintained facility
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-4">
+              Hiring Philosophy
+            </h3>
+            <p class="text-navy-500 leading-relaxed">
+              We hire for attitude and train for skill. We look for people who
+              are honest, hardworking, eager to learn, and committed to doing
+              quality work. Experience is valuable, but willingness to grow is
+              non-negotiable.
+            </p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <h3 class="text-xl font-bold text-navy-900 mb-6">
+              Open Positions
+            </h3>
+            <div class="space-y-4">
+              <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div class="flex items-start justify-between mb-2">
+                  <h4 class="font-semibold text-navy-900">
+                    Production Supervisor
+                  </h4>
+                  <span
+                    class="text-xs bg-brand-100 text-brand-700 px-3 py-1 rounded-full font-semibold">Full-Time</span>
+                </div>
+                <p class="text-sm text-navy-500 mb-3">
+                  Experience in FMCG liquid manufacturing preferred.
+                  Responsible for line supervision and production planning.
+                </p>
+                <div class="flex gap-4 text-xs text-navy-400">
+                  <span><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Manufacturing Unit</span><span><i
+                      data-lucide="briefcase" class="w-3 h-3 inline mr-1"></i>2-5 Years</span>
+                </div>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div class="flex items-start justify-between mb-2">
+                  <h4 class="font-semibold text-navy-900">
+                    Quality Assurance Executive
+                  </h4>
+                  <span
+                    class="text-xs bg-brand-100 text-brand-700 px-3 py-1 rounded-full font-semibold">Full-Time</span>
+                </div>
+                <p class="text-sm text-navy-500 mb-3">
+                  B.Sc/M.Sc in Chemistry. Responsible for in-process quality
+                  checks and lab testing.
+                </p>
+                <div class="flex gap-4 text-xs text-navy-400">
+                  <span><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Quality Lab</span><span><i
+                      data-lucide="briefcase" class="w-3 h-3 inline mr-1"></i>1-3 Years</span>
+                </div>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div class="flex items-start justify-between mb-2">
+                  <h4 class="font-semibold text-navy-900">
+                    Sales & Distribution Executive
+                  </h4>
+                  <span
+                    class="text-xs bg-brand-100 text-brand-700 px-3 py-1 rounded-full font-semibold">Full-Time</span>
+                </div>
+                <p class="text-sm text-navy-500 mb-3">
+                  FMCG sales experience preferred. Manage distributor
+                  relationships and territory growth.
+                </p>
+                <div class="flex gap-4 text-xs text-navy-400">
+                  <span><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Field-Based</span><span><i
+                      data-lucide="briefcase" class="w-3 h-3 inline mr-1"></i>2-4 Years</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 p-6 bg-navy-50 rounded-xl border border-navy-100">
+              <h4 class="font-semibold text-navy-900 mb-2">
+                Don't see a suitable role?
+              </h4>
+              <p class="text-sm text-navy-500 mb-4">
+                Send your resume to
+                <span class="font-semibold text-navy-700">careers@frezool.com</span>
+                and we'll keep you in mind for future openings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: INVESTORS ===================== -->
+  <div id="page-investors" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Investors</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Corporate Information
+          </h1>
+          <p class="text-lg text-navy-200">
+            Transparent disclosure for investors, partners, and stakeholders.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <!-- Company Details -->
+          <div class="reveal mb-16">
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+              Company Details
+            </h2>
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    Company Name
+                  </p>
+                  <p class="text-navy-900 font-medium">
+                    Frezool Industries Private Limited
+                  </p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    CIN
+                  </p>
+                  <p class="text-navy-900 font-medium font-mono">
+                    U20231UP2025PTC236832
+                  </p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    Date of Incorporation
+                  </p>
+                  <p class="text-navy-900 font-medium">9102506929</p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    Registered Office
+                  </p>
+                  <p class="text-navy-900 font-medium">
+                    C-38 Saho Colony, Kalpana Estate, Sgpgi, Lucknow, Lucknow, Uttar Pradesh, 226014, India.
+                  </p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    Authorized Capital
+                  </p>
+                  <p class="text-navy-900 font-medium">10,000</p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    Paid-up Capital
+                  </p>
+                  <p class="text-navy-900 font-medium">10,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Director Information -->
+          <div class="reveal mb-16">
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+              Board of Directors
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div class="flex items-center gap-4 mb-3">
+                  <div class="w-14 h-14 bg-navy-200 rounded-full flex items-center justify-center">
+                    <i data-lucide="user" class="w-6 h-6 text-navy-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-navy-900">
+                      [Director Name]
+                    </h4>
+                    <p class="text-xs text-navy-400">Managing Director</p>
+                  </div>
+                </div>
+                <p class="text-xs text-navy-400">DIN: [To be updated]</p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div class="flex items-center gap-4 mb-3">
+                  <div class="w-14 h-14 bg-navy-200 rounded-full flex items-center justify-center">
+                    <i data-lucide="user" class="w-6 h-6 text-navy-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-navy-900">
+                      [Director Name]
+                    </h4>
+                    <p class="text-xs text-navy-400">Director</p>
+                  </div>
+                </div>
+                <p class="text-xs text-navy-400">DIN: [To be updated]</p>
+              </div>
+            </div>
+            <p class="text-xs text-navy-400 mt-4">
+              Director details to be updated as per company disclosure policy
+              and MCA records.
+            </p>
+          </div>
+
+          <!-- Corporate Governance -->
+          <div class="reveal mb-16">
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+              Corporate Governance
+            </h2>
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-sm text-navy-600">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Company governed by the
+                  provisions of the Companies Act,
+                  2013
+                </li>
+                <li class="flex items-start gap-3 text-sm text-navy-600">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Annual returns and
+                  financial statements filed with the
+                  Registrar of Companies
+                </li>
+                <li class="flex items-start gap-3 text-sm text-navy-600">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Statutory audits
+                  conducted by a qualified Chartered
+                  Accountant
+                </li>
+                <li class="flex items-start gap-3 text-sm text-navy-600">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Board meetings
+                  conducted as per statutory requirements
+                </li>
+                <li class="flex items-start gap-3 text-sm text-navy-600">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i>Proper maintenance of
+                  statutory registers and records
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Legal Disclosures -->
+          <div class="reveal">
+            <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-6">
+              Legal Disclosures
+            </h2>
+            <div class="bg-amber-50 rounded-2xl p-8 border border-amber-100">
+              <div class="flex gap-3 mb-4">
+                <i data-lucide="info" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
+                <h4 class="font-semibold text-navy-900">Important Notice</h4>
+              </div>
+              <p class="text-sm text-navy-600 leading-relaxed mb-4">
+                This website is a corporate information platform and does not
+                constitute an offer to sell or solicitation of an offer to buy
+                any securities of Frezool Industries Private Limited. The
+                company is a private limited company and its shares are not
+                publicly traded.
+              </p>
+              <p class="text-sm text-navy-600 leading-relaxed">
+                All information on this website is provided for general
+                informational purposes. While we strive for accuracy, we make
+                no warranties about the completeness of information. Investors
+                and partners should conduct independent due diligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PAGE: CONTACT US ===================== -->
+  <div id="page-contact" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Contact</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Get in Touch
+          </h1>
+          <p class="text-lg text-navy-200">
+            We're here to answer your questions about partnerships,
+            distribution, or manufacturing inquiries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-5 gap-12">
+          <!-- Contact Info -->
+          <div class="lg:col-span-2 reveal">
+            <h2 class="text-2xl font-bold text-navy-900 mb-6">
+              Contact Information
+            </h2>
+            <div class="space-y-6 mb-10">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="building-2" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    Registered Office
+                  </p>
+                  <p class="text-sm text-navy-700">
+                    Frezool Industries Private Limited<br />C-38 Saho Colony, Kalpana Estate, Sgpgi, Lucknow, Lucknow,
+                    Uttar Pradesh, 226014,<br />India.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="mail" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    Official Email
+                  </p>
+                  <p class="text-sm text-navy-700">info@frezoolindustries.com</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5 text-brand-600"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-navy-400 uppercase tracking-wider mb-1">
+                    Phone
+                  </p>
+                  <p class="text-sm text-navy-700">9102506929</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div
+              class="rounded-xl overflow-hidden border border-gray-200 h-64 bg-gray-100 flex items-center justify-center">
+              <div class="text-center">
+                <i data-lucide="map" class="w-10 h-10 text-navy-300 mx-auto mb-2"></i>
+                <p class="text-sm text-navy-400">Google Map Integration</p>
+                <p class="text-xs text-navy-300">Map will be embedded here</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-3 reveal reveal-delay-2">
+            <h2 class="text-2xl font-bold text-navy-900 mb-6">
+              Business Inquiry
+            </h2>
+            <form id="contactForm" class="space-y-5" onsubmit="handleContactForm(event)">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-sm font-medium text-navy-700 mb-1.5">Full Name *</label>
+                  <input type="text" required
+                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition"
+                    placeholder="Your full name" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-navy-700 mb-1.5">Organization</label>
+                  <input type="text"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition"
+                    placeholder="Company name" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-sm font-medium text-navy-700 mb-1.5">Email Address *</label>
+                  <input type="email" required
+                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition"
+                    placeholder="you@company.com" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-navy-700 mb-1.5">Phone Number *</label>
+                  <input type="tel" required
+                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition"
+                    placeholder="+91 XXXXX XXXXX" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-navy-700 mb-1.5">Inquiry Type *</label>
+                <select required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition text-navy-600">
+                  <option value="">Select inquiry type</option>
+                  <option>Distribution Partnership</option>
+                  <option>Contract Manufacturing</option>
+                  <option>Private Labeling</option>
+                  <option>Institutional/Bulk Order</option>
+                  <option>General Inquiry</option>
+                  <option>Career Inquiry</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-navy-700 mb-1.5">Message *</label>
+                <textarea required rows="5"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition resize-none"
+                  placeholder="Tell us about your requirement..."></textarea>
+              </div>
+              <button type="submit"
+                class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white px-8 py-3.5 text-sm font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-brand-500/20 flex items-center justify-center gap-2">
+                Submit Inquiry <i data-lucide="send" class="w-4 h-4"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== LEGAL PAGES ===================== -->
+  <!-- Privacy Policy -->
+  <div id="page-privacy" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Legal</span>
+          <h1 class="text-4xl font-extrabold text-white tracking-tight">
+            Privacy Policy
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-6 reveal">
+        <p class="text-sm text-navy-400 mb-8">Last updated: 01.04.2026</p>
+        <div class="prose prose-navy max-w-none space-y-6 text-navy-600 leading-relaxed">
+          <p>
+            <strong class="text-navy-900">1. Introduction</strong><br />Frezool Industries Private Limited ("we", "us",
+            "our") is
+            committed to protecting your privacy. This Privacy Policy explains
+            how we collect, use, disclose, and safeguard your information when
+            you visit our website.
+          </p>
+          <p>
+            <strong class="text-navy-900">2. Information We Collect</strong><br />We may collect personal information
+            that you voluntarily
+            provide to us when you contact us through forms, email, or phone.
+            This may include your name, email address, phone number,
+            organization name, and inquiry details.
+          </p>
+          <p>
+            <strong class="text-navy-900">3. How We Use Your Information</strong><br />We use the information we collect
+            to respond to your
+            inquiries, provide requested information about our products and
+            services, improve our website, and communicate with you about
+            business opportunities.
+          </p>
+          <p>
+            <strong class="text-navy-900">4. Information Sharing</strong><br />We do not sell, trade, or rent your
+            personal information to
+            third parties. We may share information with service providers who
+            assist us in operating our website or conducting our business,
+            subject to confidentiality agreements.
+          </p>
+          <p>
+            <strong class="text-navy-900">5. Data Security</strong><br />We
+            implement appropriate technical and organizational security
+            measures to protect your personal information. However, no method
+            of transmission over the Internet is 100% secure.
+          </p>
+          <p>
+            <strong class="text-navy-900">6. Cookies</strong><br />Our website
+            may use cookies to enhance your browsing experience. Please refer
+            to our Cookie Policy for more details.
+          </p>
+          <p>
+            <strong class="text-navy-900">7. Your Rights</strong><br />You
+            have the right to access, correct, or delete your personal
+            information. To exercise these rights, please contact us at
+            info@frezoolindustries.com.
+          </p>
+          <p>
+            <strong class="text-navy-900">8. Changes to This Policy</strong><br />We may update this Privacy Policy from
+            time to time.
+            Changes will be posted on this page with an updated date.
+          </p>
+          <p>
+            <strong class="text-navy-900">9. Contact</strong><br />For
+            privacy-related inquiries: Frezool Industries Private Limited,
+            Email: info@frezoolindustries.com
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Terms & Conditions -->
+  <div id="page-terms" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Legal</span>
+          <h1 class="text-4xl font-extrabold text-white tracking-tight">
+            Terms & Conditions
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-6 reveal">
+        <p class="text-sm text-navy-400 mb-8">Last updated: 01.04.2026</p>
+        <div class="prose prose-navy max-w-none space-y-6 text-navy-600 leading-relaxed">
+          <p>
+            <strong class="text-navy-900">1. Acceptance</strong><br />By
+            accessing and using this website, you accept and agree to be bound
+            by these Terms and Conditions.
+          </p>
+          <p>
+            <strong class="text-navy-900">2. Nature of Website</strong><br />This website is a corporate information
+            platform for
+            Frezool Industries Private Limited. It does not facilitate any
+            eCommerce transactions, product purchases, or online ordering.
+          </p>
+          <p>
+            <strong class="text-navy-900">3. Intellectual Property</strong><br />All content on this website, including
+            text, graphics,
+            logos, images, and design elements, is the property of Frezool
+            Industries Private Limited and is protected by intellectual
+            property laws.
+          </p>
+          <p>
+            <strong class="text-navy-900">4. Use Restrictions</strong><br />You may not reproduce, distribute, modify,
+            or create
+            derivative works from any content on this website without prior
+            written permission.
+          </p>
+          <p>
+            <strong class="text-navy-900">5. Information Accuracy</strong><br />While we strive to provide accurate and
+            up-to-date
+            information, we make no warranties about the completeness or
+            accuracy of information on this website.
+          </p>
+          <p>
+            <strong class="text-navy-900">6. Limitation of Liability</strong><br />Frezool Industries Private Limited
+            shall not be liable for
+            any direct, indirect, incidental, or consequential damages arising
+            from the use of this website.
+          </p>
+          <p>
+            <strong class="text-navy-900">7. Third-Party Links</strong><br />This website may contain links to
+            third-party websites. We
+            are not responsible for the content or practices of these
+            websites.
+          </p>
+          <p>
+            <strong class="text-navy-900">8. Governing Law</strong><br />These
+            terms are governed by the laws of India, and any disputes shall be
+            subject to the exclusive jurisdiction of courts in India.
+          </p>
+          <p>
+            <strong class="text-navy-900">9. Contact</strong><br />For
+            terms-related inquiries: info@frezoolindustries.com
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Disclaimer -->
+  <div id="page-disclaimer" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Legal</span>
+          <h1 class="text-4xl font-extrabold text-white tracking-tight">
+            Disclaimer
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-6 reveal">
+        <div class="prose prose-navy max-w-none space-y-6 text-navy-600 leading-relaxed">
+          <p>
+            <strong class="text-navy-900">General Disclaimer</strong><br />The
+            information provided on this website is for general informational
+            purposes only. While Frezool Industries Private Limited endeavors
+            to keep the information accurate and up-to-date, we make no
+            representations or warranties of any kind, express or implied,
+            about the completeness, accuracy, reliability, suitability, or
+            availability of the information, products, services, or related
+            graphics contained on this website.
+          </p>
+          <p>
+            <strong class="text-navy-900">No Commercial Offer</strong><br />This website does not constitute an offer to
+            sell products.
+            Product displays under the Phenora brand are for informational and
+            showcase purposes only. No pricing, ordering, or transactional
+            features are available on this website.
+          </p>
+          <p>
+            <strong class="text-navy-900">No Investment Advice</strong><br />Nothing on this website should be construed
+            as investment
+            advice, a solicitation, or an offer to buy or sell securities.
+            Frezool Industries Private Limited is a private limited company
+            and its shares are not publicly traded.
+          </p>
+          <p>
+            <strong class="text-navy-900">Third-Party Content</strong><br />Any third-party content, trademarks, or
+            references
+            mentioned on this website belong to their respective owners.
+          </p>
+          <p>
+            <strong class="text-navy-900">External Links</strong><br />Links
+            to external websites are provided for convenience only. Frezool
+            Industries Private Limited does not endorse or take responsibility
+            for the content of external sites.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Cookie Policy -->
+  <div id="page-cookies" class="page-section">
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl reveal">
+          <span class="section-label mb-6 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
+            Legal</span>
+          <h1 class="text-4xl font-extrabold text-white tracking-tight">
+            Cookie Policy
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-6 reveal">
+        <p class="text-sm text-navy-400 mb-8">Last updated: 01.04.2026</p>
+        <div class="prose prose-navy max-w-none space-y-6 text-navy-600 leading-relaxed">
+          <p>
+            <strong class="text-navy-900">What Are Cookies</strong><br />Cookies are small text files stored on your
+            device when you
+            visit a website. They help the website remember your preferences
+            and improve your browsing experience.
+          </p>
+          <p>
+            <strong class="text-navy-900">How We Use Cookies</strong><br />We
+            may use essential cookies to ensure the basic functionality of our
+            website and analytics cookies to understand how visitors interact
+            with our website.
+          </p>
+          <p><strong class="text-navy-900">Types of Cookies</strong></p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>
+              <strong class="text-navy-900">Essential Cookies:</strong>
+              Required for the website to function properly.
+            </li>
+            <li>
+              <strong class="text-navy-900">Analytics Cookies:</strong> Help
+              us understand website traffic and usage patterns.
+            </li>
+          </ul>
+          <p>
+            <strong class="text-navy-900">Managing Cookies</strong><br />You
+            can control or delete cookies through your browser settings.
+            Please note that disabling cookies may affect the functionality of
+            this website.
+          </p>
+          <p>
+            <strong class="text-navy-900">Contact</strong><br />For
+            cookie-related inquiries: info@frezoolindustries.com
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy-950 text-white">
+    <!-- Main Footer -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <!-- Company Info -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <!-- <div
+                class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center"
+              >
+                <span class="text-white font-bold text-lg">F</span>
+              </div>
+              <div>
+                <span class="text-lg font-bold tracking-tight">Frezool</span>
+                <span
+                  class="block text-[10px] font-medium tracking-widest uppercase text-navy-300"
+                  >Industries Pvt. Ltd.</span
+                >
+              </div> -->
+            <a href="#home" class="flex items-center gap-3 group" onclick="navigateTo('home')"> <img
+                src="https://i.postimg.cc/9fSDTDx8/Frezool-Industries-Logo-1-removebg-preview.png" style="width:130px;">
+            </a>
+          </div>
+          <p class="text-sm text-navy-300 leading-relaxed mb-6">
+            Innovating Hygiene. Delivering Trust. An India-based FMCG
+            manufacturing company focused on hygiene and home care solutions.
+          </p>
+          <!-- <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/10 hover:bg-brand-500 rounded-lg flex items-center justify-center transition-colors"
+                aria-label="LinkedIn"
+                ><i data-lucide="linkedin" class="w-4 h-4"></i
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/10 hover:bg-brand-500 rounded-lg flex items-center justify-center transition-colors"
+                aria-label="Twitter"
+                ><i data-lucide="twitter" class="w-4 h-4"></i
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/10 hover:bg-brand-500 rounded-lg flex items-center justify-center transition-colors"
+                aria-label="Facebook"
+                ><i data-lucide="facebook" class="w-4 h-4"></i
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/10 hover:bg-brand-500 rounded-lg flex items-center justify-center transition-colors"
+                aria-label="Instagram"
+                ><i data-lucide="instagram" class="w-4 h-4"></i
+              ></a>
+            </div> -->
+
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 bg-white/10 hover:bg-blue-500 rounded-lg flex items-center justify-center">
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+            <a href="#" class="w-9 h-9 bg-white/10 hover:bg-blue-500 rounded-lg flex items-center justify-center">
+              <i class="fab fa-twitter text-white"></i>
+            </a>
+            <a href="#" class="w-9 h-9 bg-white/10 hover:bg-blue-500 rounded-lg flex items-center justify-center">
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a href="#" class="w-9 h-9 bg-white/10 hover:bg-blue-500 rounded-lg flex items-center justify-center">
+              <i class="fab fa-instagram text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">
+            Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#home" onclick="navigateTo('home')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="#about" onclick="navigateTo('about')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">About Us</a>
+            </li>
+            <li>
+              <a href="#business" onclick="navigateTo('business')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Our Business</a>
+            </li>
+            <li>
+              <a href="#phenora" onclick="navigateTo('phenora')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Phenora Brand</a>
+            </li>
+            <li>
+              <a href="#manufacturing" onclick="navigateTo('manufacturing')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Manufacturing & Quality</a>
+            </li>
+            <li>
+              <a href="#certifications" onclick="navigateTo('certifications')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Certifications</a>
+            </li>
+            <li>
+              <a href="#sustainability" onclick="navigateTo('sustainability')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Sustainability</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">
+            Company
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#careers" onclick="navigateTo('careers')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Careers</a>
+            </li>
+            <li>
+              <a href="#investors" onclick="navigateTo('investors')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Investor Information</a>
+            </li>
+            <li>
+              <a href="#contact" onclick="navigateTo('contact')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Contact Us</a>
+            </li>
+          </ul>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-4 mt-8">
+            Legal
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#privacy" onclick="navigateTo('privacy')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#terms" onclick="navigateTo('terms')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#disclaimer" onclick="navigateTo('disclaimer')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Disclaimer</a>
+            </li>
+            <li>
+              <a href="#cookies" onclick="navigateTo('cookies')"
+                class="text-sm text-navy-400 hover:text-white transition-colors">Cookie Policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">
+            Contact
+          </h4>
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <i data-lucide="building-2" class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
+              <div>
+                <p class="text-sm text-navy-300">
+                  Frezool Industries Private Limited
+                </p>
+                <p class="text-xs text-navy-500">
+                  C-38 Saho Colony, Kalpana Estate, Sgpgi, Lucknow, Lucknow, Uttar Pradesh, 226014, India.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
+              <div>
+                <p class="text-sm text-navy-300">info@frezoolindustries.com</p>
+                <p class="text-xs text-navy-500">Official Email</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
+              <div>
+                <p class="text-sm text-navy-300">9102506929</p>
+                <p class="text-xs text-navy-500">Phone</p>
+              </div>
+            </div>
+          </div>
+          <!-- CIN Badge -->
+          <div class="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
+            <p class="text-[10px] font-semibold text-navy-400 uppercase tracking-wider mb-1">
+              CIN
+            </p>
+            <p class="text-xs text-navy-200 font-mono">
+              U20231UP2025PTC236832
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 py-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-xs text-navy-500 text-center md:text-left">
+            © <span id="currentYear"></span> Frezool Industries Private
+            Limited. All rights reserved.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-navy-500">
+            <a href="#privacy" onclick="navigateTo('privacy')" class="hover:text-white transition-colors">Privacy</a>
+            <span class="text-navy-700">·</span>
+            <a href="#terms" onclick="navigateTo('terms')" class="hover:text-white transition-colors">Terms</a>
+            <span class="text-navy-700">·</span>
+            <a href="#disclaimer" onclick="navigateTo('disclaimer')"
+              class="hover:text-white transition-colors">Disclaimer</a>
+            <span class="text-navy-700">·</span>
+            <a href="#cookies" onclick="navigateTo('cookies')" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Back to Top -->
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-6 left-6 z-40 w-11 h-11 bg-navy-900 hover:bg-navy-800 text-white rounded-xl shadow-lg flex items-center justify-center transition-all opacity-0 translate-y-4 pointer-events-none"
+    aria-label="Back to top">
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // ---- SPA Router ----
+    function navigateTo(page) {
+      // Hide all pages
+      document.querySelectorAll(".page-section").forEach((p) => {
+        p.classList.remove("active");
+      });
+      // Show target page
+      const target = document.getElementById("page-" + page);
+      if (target) {
+        target.classList.add("active");
+      } else {
+        // Fallback to home
+        document.getElementById("page-home").classList.add("active");
+      }
+      // Update URL hash
+      window.location.hash = page;
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: "instant" });
+      // Re-init reveals for new page
+      setTimeout(() => {
+        initRevealAnimations();
+        initCounters();
+      }, 100);
+      // Re-init Lucide icons for new page
+      setTimeout(() => lucide.createIcons(), 50);
+    }
+
+    // Handle browser back/forward
+    window.addEventListener("hashchange", () => {
+      const hash = window.location.hash.replace("#", "") || "home";
+      document
+        .querySelectorAll(".page-section")
+        .forEach((p) => p.classList.remove("active"));
+      const target = document.getElementById("page-" + hash);
+      if (target) {
+        target.classList.add("active");
+      } else {
+        document.getElementById("page-home").classList.add("active");
+      }
+      window.scrollTo({ top: 0, behavior: "instant" });
+      setTimeout(() => {
+        initRevealAnimations();
+        initCounters();
+        lucide.createIcons();
+      }, 100);
+    });
+
+    // Initial route
+    window.addEventListener("DOMContentLoaded", () => {
+      const hash = window.location.hash.replace("#", "") || "home";
+      document
+        .querySelectorAll(".page-section")
+        .forEach((p) => p.classList.remove("active"));
+      const target = document.getElementById("page-" + hash);
+      if (target) {
+        target.classList.add("active");
+      } else {
+        document.getElementById("page-home").classList.add("active");
+      }
+      lucide.createIcons();
+      initRevealAnimations();
+      initCounters();
+      initNavScroll();
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    });
+
+    // ---- Nav Scroll Effect ----
+    function initNavScroll() {
+      const nav = document.getElementById("mainNav");
+      let lastScroll = 0;
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        if (scrollY > 50) {
+          nav.classList.add("nav-scrolled");
+          nav.querySelectorAll(".nav-link").forEach((l) => {
+            l.classList.remove("text-white/80");
+            l.classList.add(
+              "text-navy-600",
+              "hover:text-navy-900",
+              "hover:bg-navy-50",
+            );
+          });
+          nav
+            .querySelector(".nav-text-color")
+            ?.classList.remove("text-white");
+          nav
+            .querySelector(".nav-text-color")
+            ?.classList.add("text-navy-900");
+          nav
+            .querySelector(".nav-subtext-color")
+            ?.classList.remove("text-white/60");
+          nav
+            .querySelector(".nav-subtext-color")
+            ?.classList.add("text-navy-400");
+          const icon = nav.querySelector(".nav-icon-color");
+          if (icon) {
+            icon.classList.remove("text-white");
+            icon.classList.add("text-navy-700");
+          }
+        } else {
+          nav.classList.remove("nav-scrolled");
+          nav.querySelectorAll(".nav-link").forEach((l) => {
+            l.classList.add("text-white/80");
+            l.classList.remove(
+              "text-navy-600",
+              "hover:text-navy-900",
+              "hover:bg-navy-50",
+            );
+          });
+          nav.querySelector(".nav-text-color")?.classList.add("text-white");
+          nav
+            .querySelector(".nav-text-color")
+            ?.classList.remove("text-navy-900");
+          nav
+            .querySelector(".nav-subtext-color")
+            ?.classList.add("text-white/60");
+          nav
+            .querySelector(".nav-subtext-color")
+            ?.classList.remove("text-navy-400");
+          const icon = nav.querySelector(".nav-icon-color");
+          if (icon) {
+            icon.classList.add("text-white");
+            icon.classList.remove("text-navy-700");
+          }
+        }
+        // Back to top button
+        const btn = document.getElementById("backToTop");
+        if (scrollY > 600) {
+          btn.classList.remove(
+            "opacity-0",
+            "translate-y-4",
+            "pointer-events-none",
+          );
+          btn.classList.add("opacity-100", "translate-y-0");
+        } else {
+          btn.classList.add(
+            "opacity-0",
+            "translate-y-4",
+            "pointer-events-none",
+          );
+          btn.classList.remove("opacity-100", "translate-y-0");
+        }
+        lastScroll = scrollY;
+      });
+      // Trigger once
+      window.dispatchEvent(new Event("scroll"));
+    }
+
+    // ---- Reveal Animations ----
+    function initRevealAnimations() {
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      );
+      reveals.forEach((el) => {
+        el.classList.remove("visible");
+        observer.observe(el);
+      });
+    }
+
+    // ---- Stat Counters ----
+    function initCounters() {
+      const counters = document.querySelectorAll(".stat-counter");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const target = parseInt(el.getAttribute("data-target"));
+              if (el.dataset.counted) return;
+              el.dataset.counted = "true";
+              let current = 0;
+              const increment = target / 40;
+              const suffix = el.parentElement
+                .querySelector("p")
+                ?.textContent.includes("%")
+                ? "%"
+                : "+";
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  current = target;
+                  clearInterval(timer);
+                }
+                el.textContent = Math.floor(current) + suffix;
+              }, 40);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+      counters.forEach((c) => observer.observe(c));
+    }
+
+    // ---- Mobile Menu ----
+    function toggleMobileMenu() {
+      document.getElementById("mobileMenu").classList.toggle("open");
+      document.getElementById("mobileOverlay").classList.toggle("open");
+      document.body.classList.toggle("overflow-hidden");
+    }
+
+    // ---- Contact Form ----
+    function handleContactForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML =
+        '<svg class="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" class="opacity-25"></circle><path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" fill="currentColor" class="opacity-75"></path></svg> Sending...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.disabled = false;
+        form.reset();
+        showToast(
+          "Thank you! Your inquiry has been submitted successfully. We will get back to you soon.",
+          "success",
+        );
+      }, 1500);
+    }
+
+    // ---- Toast ----
+    function showToast(message, type = "success") {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.className = "toast toast-" + type + " show";
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 5000);
+    }
+
+    // ---- Close dropdown on outside click (desktop) ----
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".dropdown")) {
+        document.querySelectorAll(".dropdown-menu").forEach((m) => {
+          m.style.opacity = "0";
+          m.style.visibility = "hidden";
+          m.style.transform = "translateY(8px)";
+        });
+      }
+    });
+
+  </script>
+</body>
+
+</html>
