@@ -2,6 +2,5 @@
 
 User-agent: *
 Allow: /
-Disallow: /private/
 
 Sitemap: https://frezoolindustries.com/sitemap.xml
