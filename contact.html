@@ -39,6 +39,195 @@
 
     gtag('config', 'G-THVN16CW16');
   </script>
+  <style>
+    .gen-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 640px;
+      margin: 0 auto
+    }
+
+    .gen-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    @media(max-width:560px) {
+      .gen-row {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .gen-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .gen-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #374151;
+      letter-spacing: .02em
+    }
+
+    .gen-req {
+      color: #059669;
+    }
+
+    .gen-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #111;
+      background: #fff;
+      outline: none;
+      transition: border .2s, box-shadow .2s
+    }
+
+    .gen-input::placeholder {
+      color: #9ca3af
+    }
+
+    .gen-input:hover {
+      border-color: #059669;
+    }
+
+    .gen-input:focus {
+      border-color: #059669;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, .1)
+    }
+
+    .gen-input.gen-invalid {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, .1)
+    }
+
+    .gen-error {
+      font-size: 12px;
+      color: #ef4444;
+      display: none
+    }
+
+    .gen-error.gen-show {
+      display: block
+    }
+
+    .gen-select-wrap {
+      position: relative
+    }
+
+    .gen-select {
+      appearance: none;
+      cursor: pointer;
+      padding-right: 36px
+    }
+
+    .gen-select-arrow {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6b7280;
+      pointer-events: none;
+      font-size: 14px
+    }
+
+    .gen-textarea {
+      resize: vertical;
+      min-height: 80px
+    }
+
+    .gen-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #059669;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background .2s, transform .15s
+    }
+
+
+    .gen-btn:hover {
+      background: #059669;
+      transform: translateY(-1px)
+    }
+
+    .gen-btn:active {
+      transform: translateY(0)
+    }
+
+    .gen-btn:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+      transform: none
+    }
+
+    .gen-btn-loader {
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255, 255, 255, .3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: genSpin .5s linear infinite
+    }
+
+    @keyframes genSpin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .gen-success {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 14px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      color: #166534;
+      font-size: 14px;
+      font-weight: 500
+    }
+
+    .gen-success.gen-show {
+      display: flex
+    }
+
+    .gen-success-icon {
+      width: 22px;
+      height: 22px;
+      background: #22c55e;
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0
+    }
+  </style>
 </head>
 
 <body class="bg-white text-navy-900 antialiased" data-page="contact">
@@ -244,75 +433,84 @@
             <!-- Map Placeholder -->
             <div
               class="rounded-xl overflow-hidden border border-gray-200 h-64 bg-gray-100 flex items-center justify-center">
-              <div class="text-center">
-                <i data-lucide="map" class="w-10 h-10 text-navy-300 mx-auto mb-2"></i>
+              <!-- <div class="text-center"> -->
+              <!-- <i data-lucide="map" class="w-10 h-10 text-navy-300 mx-auto mb-2"></i>
                 <p class="text-sm text-navy-400">Google Map Integration</p>
-                <p class="text-xs text-navy-300">Map will be embedded here</p>
+                <p class="text-xs text-navy-300">Map will be embedded here</p> -->
+              <div style="width:100%; height:350px; border-radius:12px; overflow:hidden;">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.949205327668!2d80.98189397540797!3d26.873354861780893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd6758b40b2b%3A0x2e71883c9aa64d0a!2sLekhraj%20Dollar%20Complex!5e0!3m2!1sen!2sin!4v1776685940200!5m2!1sen!2sin"
+                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
               </div>
+              <!-- </div> -->
             </div>
           </div>
+
+
 
           <!-- Contact Form -->
           <div class="lg:col-span-3 reveal reveal-delay-2">
             <h2 class="text-2xl font-bold text-navy-900 mb-6">
               Business Inquiry
             </h2>
-            <form id="contactForm" class="space-y-5" onsubmit="handleContactForm(event)">
-              <div class="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label class="block text-sm font-medium text-navy-700 mb-1.5">Full Name *</label>
-                  <input type="text" required
-                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition"
-                    placeholder="Your full name" />
+            <form
+              action="https://docs.google.com/forms/d/e/1FAIpQLSe58h9ALKC0wWcUlfdlHDdyiMZqeVY9Uj_NAeK150IW7pgruQ/formResponse"
+              method="POST" target="gen-frame" class="gen-form">
+              <div class="gen-row">
+                <div class="gen-group">
+                  <label class="gen-label">Full Name <span class="gen-req">*</span></label>
+                  <input type="text" name="entry.1109083126" class="gen-input" placeholder="Your full name" required>
                 </div>
-                <div>
-                  <label class="block text-sm font-medium text-navy-700 mb-1.5">Organization</label>
-                  <input type="text"
-                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition"
-                    placeholder="Company name" />
+                <div class="gen-group">
+                  <label class="gen-label">Organization</label>
+                  <input type="text" name="entry.1609254393" class="gen-input" placeholder="Company name">
                 </div>
               </div>
-              <div class="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label class="block text-sm font-medium text-navy-700 mb-1.5">Email Address *</label>
-                  <input type="email" required
-                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition"
-                    placeholder="you@company.com" />
+              <div class="gen-row">
+                <div class="gen-group">
+                  <label class="gen-label">Email Address <span class="gen-req">*</span></label>
+                  <input type="email" name="entry.844586138" class="gen-input" placeholder="you@company.com" required>
                 </div>
-                <div>
-                  <label class="block text-sm font-medium text-navy-700 mb-1.5">Phone Number *</label>
-                  <input type="tel" required
-                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition"
-                    placeholder="+915224750257" />
+                <div class="gen-group">
+                  <label class="gen-label">Phone Number</label>
+                  <input type="tel" name="entry.631428250" class="gen-input" id="genPhone" placeholder="10 digit number"
+                    maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                  <span class="gen-error" id="genPhoneErr">Please enter exactly 10 digits</span>
                 </div>
               </div>
-              <div>
-                <label class="block text-sm font-medium text-navy-700 mb-1.5">Inquiry Type *</label>
-                <select required
-                  class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition text-navy-600">
-                  <option value="">Select inquiry type</option>
-                  <option>Distribution Partnership</option>
-                  <option>Contract Manufacturing</option>
-                  <option>Private Labeling</option>
-                  <option>Institutional/Bulk Order</option>
-                  <option>General Inquiry</option>
-                  <option>Career Inquiry</option>
-                </select>
+              <div class="gen-group">
+                <label class="gen-label">Inquiry Type <span class="gen-req">*</span></label>
+                <div class="gen-select-wrap">
+                  <select name="entry.2062892813" class="gen-input gen-select" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option>General Inquiry</option>
+                    <option>Career Options</option>
+                    <option>Distribution Inquiry</option>
+                    <option>Bulk Order</option>
+                    <option>Partnership</option>
+                    <option>Other</option>
+                  </select>
+                  <span class="gen-select-arrow">▾</span>
+                </div>
               </div>
-              <div>
-                <label class="block text-sm font-medium text-navy-700 mb-1.5">Message *</label>
-                <textarea required rows="5"
-                  class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition resize-none"
-                  placeholder="Tell us about your requirement..."></textarea>
+              <div class="gen-group">
+                <label class="gen-label">Message</label>
+                <textarea name="entry.527046273" class="gen-input gen-textarea" rows="4"
+                  placeholder="Write your message here..."></textarea>
               </div>
-              <button type="submit"
-                class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white px-8 py-3.5 text-sm font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-brand-500/20 flex items-center justify-center gap-2">
-                Submit Inquiry <i data-lucide="send" class="w-4 h-4"></i>
+              <button type="submit" class="gen-btn" id="genBtn">
+                <span class="gen-btn-text">Send Message</span>
+                <span class="gen-btn-loader" style="display:none"></span>
               </button>
             </form>
+            <div class="gen-success" id="genSuccess">
+              <span class="gen-success-icon">✓</span> Thank you! Your message has been sent successfully.
+            </div>
+            <iframe name="gen-frame" style="display:none"></iframe>
           </div>
         </div>
-      </div>
     </section>
   </div>
 
@@ -325,7 +523,8 @@
           <a href="index.html" class="flex items-center gap-3 group mb-6"><img
               src="https://raw.githubusercontent.com/frezoolindustries/frezoolindustries.com/refs/heads/main/images/Frezool_Industries_Logo_white-removebg-preview.png"
               style="width:150px;" alt="Frezool Industries Logo"></a>
-          <p class="text-sm text-navy-300 leading-relaxed mb-6">Innovating Hygiene. Delivering Trust. An India-based
+          <p class="text-sm text-navy-300 leading-relaxed mb-6">Innovating Hygiene. Delivering Trust. An
+            India-based
             FMCG manufacturing company focused on hygiene and home care solutions.</p>
           <div class="flex gap-3">
             <a href="https://www.linkedin.com/company/frezool-industries-private-limited/"
@@ -345,14 +544,17 @@
         <div>
           <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">Quick Links</h4>
           <ul class="space-y-3">
-            <li><a href="index.html" class="text-sm text-navy-400 hover:text-white transition-colors">Home</a></li>
-            <li><a href="about.html" class="text-sm text-navy-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="index.html" class="text-sm text-navy-400 hover:text-white transition-colors">Home</a>
+            </li>
+            <li><a href="about.html" class="text-sm text-navy-400 hover:text-white transition-colors">About
+                Us</a></li>
             <li><a href="business.html" class="text-sm text-navy-400 hover:text-white transition-colors">Our
                 Business</a></li>
             <li><a href="phenora.html" class="text-sm text-navy-400 hover:text-white transition-colors">Phenora
                 Brand</a></li>
             <li><a href="manufacturing.html"
-                class="text-sm text-navy-400 hover:text-white transition-colors">Manufacturing & Quality</a></li>
+                class="text-sm text-navy-400 hover:text-white transition-colors">Manufacturing & Quality</a>
+            </li>
             <li><a href="certifications.html"
                 class="text-sm text-navy-400 hover:text-white transition-colors">Certifications</a></li>
             <li><a href="sustainability.html"
@@ -365,7 +567,8 @@
             <li><a href="careers.html" class="text-sm text-navy-400 hover:text-white transition-colors">Careers</a></li>
             <li><a href="investors.html" class="text-sm text-navy-400 hover:text-white transition-colors">Investor
                 Information</a></li>
-            <li><a href="contact.html" class="text-sm text-navy-400 hover:text-white transition-colors">Contact Us</a>
+            <li><a href="contact.html" class="text-sm text-navy-400 hover:text-white transition-colors">Contact
+                Us</a>
             </li>
           </ul>
           <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-4 mt-8">Legal</h4>
@@ -386,7 +589,8 @@
             <div class="flex gap-3"><i data-lucide="building-2" class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
               <div>
                 <p class="text-sm text-navy-300">Frezool Industries Private Limited</p>
-                <p class="text-xs text-navy-500">Upper Ground Floor, 1166 Lekhraj Dollar, Faizabad Road, Indira Nagar,
+                <p class="text-xs text-navy-500">Upper Ground Floor, 1166 Lekhraj Dollar, Faizabad Road, Indira
+                  Nagar,
                   Lucknow, Uttar Pradesh, 226016, India</p>
               </div>
             </div>
@@ -413,7 +617,8 @@
     <div class="border-t border-white/10">
       <div class="max-w-7xl mx-auto px-6 py-6">
         <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p class="text-xs text-navy-500 text-center md:text-left">© <span id="currentYear"></span> Frezool Industries
+          <p class="text-xs text-navy-500 text-center md:text-left">© <span id="currentYear"></span> Frezool
+            Industries
             Private Limited. All rights reserved. Created by <a href="https://buynsofts.in"
               style="color:yellow;">Buynsofts.in</a></p>
           <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-navy-500">
@@ -438,6 +643,37 @@
     aria-label="Back to top"><i data-lucide="chevron-up" class="w-5 h-5"></i></button>
 
   <script src="js/script.js"></script>
+  <script>
+    document.querySelector('.gen-form').addEventListener('submit', function (e) {
+      var phone = document.getElementById('genPhone');
+      var err = document.getElementById('genPhoneErr');
+      if (phone.value && phone.value.length !== 10) {
+        e.preventDefault();
+        phone.classList.add('gen-invalid');
+        err.classList.add('gen-show');
+        return;
+      }
+      document.querySelector('.gen-form').style.display = 'none';
+      document.getElementById('genSuccess').classList.add('gen-show');
+      phone.classList.remove('gen-invalid');
+      err.classList.remove('gen-show');
+      var btn = document.getElementById('genBtn');
+      btn.querySelector('.gen-btn-text').style.display = 'none';
+      btn.querySelector('.gen-btn-loader').style.display = 'block';
+      btn.disabled = true;
+      document.getElementById('gen-frame').onload = function () {
+        setTimeout(function () {
+          btn.querySelector('.gen-btn-text').style.display = 'inline';
+          btn.querySelector('.gen-btn-loader').style.display = 'none';
+          btn.disabled = false;
+          document.querySelector('.gen-form').reset();
+          document.getElementById('genSuccess').classList.add('gen-show');
+        }, 500);
+      };
+    });
+
+
+  </script>
 </body>
 
 </html>
