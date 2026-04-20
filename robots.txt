@@ -1,0 +1,7 @@
+# Generated with robots.txt generator tool by ServerAvatar.com
+
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://frezoolindustries.com/sitemap.xml
