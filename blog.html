@@ -391,106 +391,301 @@
 
     // =================== BLOG DATA & LOGIC ===================
 
+    // const blogPosts = [
+    //   {
+    //     id: 1,
+    //     title: "The Future of Eco-Friendly Home Care",
+    //     category: "Sustainability",
+    //     date: "Oct 12, 2026",
+    //     readTime: "4 min",
+    //     image: "https://picsum.photos/seed/blog1/800/600",
+    //     excerpt: "Discover how biodegradable ingredients are revolutionizing the cleaning industry and reducing our carbon footprint.",
+    //     content: `
+    //       <p>The FMCG industry is undergoing a massive transformation, driven by consumer demand for greener products. At Frezool Industries, we recognize that the future of home care lies in sustainability without compromising on efficacy.</p>
+    //       <h2>Why Biodegradability Matters</h2>
+    //       <p>Traditional cleaning agents often contain phosphates and harsh chemicals that can linger in ecosystems. By switching to plant-based surfactants and biodegradable polymers, we ensure that our products break down harmlessly after use.</p>
+    //       <blockquote>"Sustainability is not just a buzzword; it is a responsibility towards the planet we share."</blockquote>
+    //       <h3>Our Commitment</h3>
+    //       <ul>
+    //         <li>Using recycled plastic for packaging (Phenora bottles).</li>
+    //         <li>Reducing water consumption in our manufacturing lines.</li>
+    //         <li>Sourcing raw materials from ethical suppliers.</li>
+    //       </ul>
+    //       <p>As we move forward, our R&D is focused on creating concentrates that reduce shipping weight and carbon emissions, aligning with our vision of a cleaner future.</p>
+    //     `
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "Maintaining Hygiene Standards in FMCG Manufacturing",
+    //     category: "Manufacturing",
+    //     date: "March 28, 2026",
+    //     readTime: "6 min",
+    //     image: "https://picsum.photos/seed/blog2/800/600",
+    //     excerpt: "A deep dive into the rigorous quality control protocols we follow to ensure every bottle is safe and effective.",
+    //     content: `
+    //       <p>In the world of liquid manufacturing, hygiene is paramount. A single contamination can have severe repercussions. That is why our facility in Lucknow operates under strict GMP (Good Manufacturing Practices).</p>
+    //       <h2>The Clean-In-Place (CIP) System</h2>
+    //       <p>We utilize automated CIP systems to sterilize our tanks and piping lines between production batches. This eliminates human error and ensures that no residue remains.</p>
+    //       <h3>Quality Checks at Every Stage</h3>
+    //       <p>From raw material intake to final packaging, our quality assurance team conducts:</p>
+    //       <ul>
+    //         <li><strong>Microbial Testing:</strong> Ensuring products are free from harmful bacteria.</li>
+    //         <li><strong>pH Balance:</strong> Critical for skin-friendly products like Phenora.</li>
+    //         <li><strong>Viscosity Checks:</strong> Ensuring the perfect flow and consistency.</li>
+    //       </ul>
+    //       <p>Our commitment to quality builds trust with our partners and consumers alike.</p>
+    //     `
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "5 Tips for a Germ-Free Kitchen",
+    //     category: "Hygiene",
+    //     date: "March 15, 2026",
+    //     readTime: "3 min",
+    //     image: "https://picsum.photos/seed/blog3/800/600",
+    //     excerpt: "The kitchen is the heart of the home, but also a hotspot for bacteria. Here is how to keep it sparkling clean.",
+    //     content: `
+    //       <p>Kitchen hygiene is essential for preventing foodborne illnesses. Here are five simple tips recommended by our experts:</p>
+    //       <h2>1. Disinfect High-Touch Surfaces</h2>
+    //       <p>Cabinet handles, fridge doors, and switches are touched constantly. Wipe them down daily with a trusted disinfectant.</p>
+    //       <h2>2. Separate Cutting Boards</h2>
+    //       <p>Always use separate boards for raw meat and vegetables to avoid cross-contamination.</p>
+    //       <h2>3. The Sink Strategy</h2>
+    //       <p>Your kitchen sink can harbor more E. coli than a toilet seat. Use a heavy-duty cleaner and scrub it regularly.</p>
+    //       <h2>4. Wash Reusable Towels</h2>
+    //       <p>Damp towels are a breeding ground for germs. Change them daily and wash in hot water.</p>
+    //       <h2>5. Don't Forget the Sponge</h2>
+    //       <p>Sanitize your sponge by microwaving it for 2 minutes or replacing it weekly.</p>
+    //     `
+    //   },
+    //   {
+    //     id: 4,
+    //     title: "Innovations in Dish Care Liquids",
+    //     category: "Manufacturing",
+    //     date: "April 30, 2026",
+    //     readTime: "5 min",
+    //     image: "https://picsum.photos/seed/blog4/800/600",
+    //     excerpt: "How we formulate liquids that cut through grease while being gentle on hands.",
+    //     content: `
+    //       <p>Creating the perfect dish wash liquid is a science. It requires balancing chemical strength with skin safety. At Frezool, our Phenora dish wash range exemplifies this balance.</p>
+    //       <h2>The Science of Surfactants</h2>
+    //       <p>Surfactants lower the surface tension of water, allowing it to mix with oils and grease. We use a blend of anionic and non-ionic surfactants to lift grease instantly.</p>
+    //       <h3>Protecting Your Hands</h2>
+    //       <p>While grease removal is the goal, skin irritation is a common side effect of cheap liquids. We incorporate natural moisturizers like Aloe Vera extracts into our formula to create a protective barrier on the skin.</p>
+    //     `
+    //   },
+    //   {
+    //     id: 5,
+    //     title: "Reducing Plastic Waste in Packaging",
+    //     category: "Sustainability",
+    //     date: "April 10, 2026",
+    //     readTime: "4 min",
+    //     image: "https://picsum.photos/seed/blog5/800/600",
+    //     excerpt: "Exploring the shift towards recyclable materials and sustainable packaging design in the FMCG sector.",
+    //     content: `
+    //       <p>Packaging is essential for product preservation, but it contributes significantly to global waste. We are actively exploring solutions to this challenge.</p>
+    //       <h2>The Shift to HDPE</h2>
+    //       <p>High-Density Polyethylene (HDPE) is one of the most easily recycled plastics. We have standardized our bottles to be mono-material HDPE, making them easier for recycling facilities to process.</p>
+    //       <h3>Lightweighting</h3>
+    //       <p>By reducing the thickness of our bottle walls without compromising durability, we use less plastic per unit. Over millions of units, this saves tons of plastic material annually.</p>
+    //     `
+    //   }
+    // ];
+
+
     const blogPosts = [
-      {
-        id: 1,
-        title: "The Future of Eco-Friendly Home Care",
-        category: "Sustainability",
-        date: "Oct 12, 2023",
-        readTime: "4 min",
-        image: "https://picsum.photos/seed/blog1/800/600",
-        excerpt: "Discover how biodegradable ingredients are revolutionizing the cleaning industry and reducing our carbon footprint.",
-        content: `
-          <p>The FMCG industry is undergoing a massive transformation, driven by consumer demand for greener products. At Frezool Industries, we recognize that the future of home care lies in sustainability without compromising on efficacy.</p>
-          <h2>Why Biodegradability Matters</h2>
-          <p>Traditional cleaning agents often contain phosphates and harsh chemicals that can linger in ecosystems. By switching to plant-based surfactants and biodegradable polymers, we ensure that our products break down harmlessly after use.</p>
-          <blockquote>"Sustainability is not just a buzzword; it is a responsibility towards the planet we share."</blockquote>
-          <h3>Our Commitment</h3>
-          <ul>
-            <li>Using recycled plastic for packaging (Phenora bottles).</li>
-            <li>Reducing water consumption in our manufacturing lines.</li>
-            <li>Sourcing raw materials from ethical suppliers.</li>
-          </ul>
-          <p>As we move forward, our R&D is focused on creating concentrates that reduce shipping weight and carbon emissions, aligning with our vision of a cleaner future.</p>
-        `
-      },
-      {
-        id: 2,
-        title: "Maintaining Hygiene Standards in FMCG Manufacturing",
-        category: "Manufacturing",
-        date: "Sep 28, 2023",
-        readTime: "6 min",
-        image: "https://picsum.photos/seed/blog2/800/600",
-        excerpt: "A deep dive into the rigorous quality control protocols we follow to ensure every bottle is safe and effective.",
-        content: `
-          <p>In the world of liquid manufacturing, hygiene is paramount. A single contamination can have severe repercussions. That is why our facility in Lucknow operates under strict GMP (Good Manufacturing Practices).</p>
-          <h2>The Clean-In-Place (CIP) System</h2>
-          <p>We utilize automated CIP systems to sterilize our tanks and piping lines between production batches. This eliminates human error and ensures that no residue remains.</p>
-          <h3>Quality Checks at Every Stage</h3>
-          <p>From raw material intake to final packaging, our quality assurance team conducts:</p>
-          <ul>
-            <li><strong>Microbial Testing:</strong> Ensuring products are free from harmful bacteria.</li>
-            <li><strong>pH Balance:</strong> Critical for skin-friendly products like Phenora.</li>
-            <li><strong>Viscosity Checks:</strong> Ensuring the perfect flow and consistency.</li>
-          </ul>
-          <p>Our commitment to quality builds trust with our partners and consumers alike.</p>
-        `
-      },
-      {
-        id: 3,
-        title: "5 Tips for a Germ-Free Kitchen",
-        category: "Hygiene",
-        date: "Sep 15, 2023",
-        readTime: "3 min",
-        image: "https://picsum.photos/seed/blog3/800/600",
-        excerpt: "The kitchen is the heart of the home, but also a hotspot for bacteria. Here is how to keep it sparkling clean.",
-        content: `
-          <p>Kitchen hygiene is essential for preventing foodborne illnesses. Here are five simple tips recommended by our experts:</p>
-          <h2>1. Disinfect High-Touch Surfaces</h2>
-          <p>Cabinet handles, fridge doors, and switches are touched constantly. Wipe them down daily with a trusted disinfectant.</p>
-          <h2>2. Separate Cutting Boards</h2>
-          <p>Always use separate boards for raw meat and vegetables to avoid cross-contamination.</p>
-          <h2>3. The Sink Strategy</h2>
-          <p>Your kitchen sink can harbor more E. coli than a toilet seat. Use a heavy-duty cleaner and scrub it regularly.</p>
-          <h2>4. Wash Reusable Towels</h2>
-          <p>Damp towels are a breeding ground for germs. Change them daily and wash in hot water.</p>
-          <h2>5. Don't Forget the Sponge</h2>
-          <p>Sanitize your sponge by microwaving it for 2 minutes or replacing it weekly.</p>
-        `
-      },
-      {
-        id: 4,
-        title: "Innovations in Dish Care Liquids",
-        category: "Manufacturing",
-        date: "Aug 30, 2023",
-        readTime: "5 min",
-        image: "https://picsum.photos/seed/blog4/800/600",
-        excerpt: "How we formulate liquids that cut through grease while being gentle on hands.",
-        content: `
-          <p>Creating the perfect dish wash liquid is a science. It requires balancing chemical strength with skin safety. At Frezool, our Phenora dish wash range exemplifies this balance.</p>
-          <h2>The Science of Surfactants</h2>
-          <p>Surfactants lower the surface tension of water, allowing it to mix with oils and grease. We use a blend of anionic and non-ionic surfactants to lift grease instantly.</p>
-          <h3>Protecting Your Hands</h2>
-          <p>While grease removal is the goal, skin irritation is a common side effect of cheap liquids. We incorporate natural moisturizers like Aloe Vera extracts into our formula to create a protective barrier on the skin.</p>
-        `
-      },
-      {
-        id: 5,
-        title: "Reducing Plastic Waste in Packaging",
-        category: "Sustainability",
-        date: "Aug 10, 2023",
-        readTime: "4 min",
-        image: "https://picsum.photos/seed/blog5/800/600",
-        excerpt: "Exploring the shift towards recyclable materials and sustainable packaging design in the FMCG sector.",
-        content: `
-          <p>Packaging is essential for product preservation, but it contributes significantly to global waste. We are actively exploring solutions to this challenge.</p>
-          <h2>The Shift to HDPE</h2>
-          <p>High-Density Polyethylene (HDPE) is one of the most easily recycled plastics. We have standardized our bottles to be mono-material HDPE, making them easier for recycling facilities to process.</p>
-          <h3>Lightweighting</h3>
-          <p>By reducing the thickness of our bottle walls without compromising durability, we use less plastic per unit. Over millions of units, this saves tons of plastic material annually.</p>
-        `
-      }
-    ];
+  {
+    id: 1,
+    title: "CSIR-CIMAP and Frezool Industries Sign MoU for Herbal Product Market Seeding",
+    category: "Innovation",
+    date: "May 10, 2026",
+    readTime: "6 min",
+    image: "https://picsum.photos/seed/blog6/800/600",
+    excerpt: "Frezool Industries partners with CSIR-CIMAP to accelerate herbal innovation and bring science-backed wellness products to market.",
+    content: `
+      <p><strong>Strengthening Innovation in Herbal Wellness and Sustainable Consumer Products</strong></p>
+
+      <p>In a significant step toward promoting innovation-driven herbal products in India, CSIR-Central Institute of Medicinal and Aromatic Plants (CSIR-CIMAP) announced key agreements during the National Technology Day 2026 celebrations.</p>
+
+      <p>Among the major highlights was the signing of a Memorandum of Understanding (MoU) with Frezool Industries Pvt. Ltd. for the market seeding of five herbal products developed with scientific and research-backed support.</p>
+
+      <p>This collaboration reflects a shared vision of bringing advanced herbal and wellness solutions to Indian consumers through innovation, sustainability, and scientific excellence.</p>
+
+      <h2>Bridging Research and Consumer Markets</h2>
+      <p>The partnership aims to accelerate commercialization of herbal products designed for modern hygiene, wellness, and household care needs. These products are expected to combine traditional herbal knowledge with modern formulation science.</p>
+
+      <h2>National Technology Day 2026: Key Collaborations</h2>
+      <ul>
+        <li>MoU with Frezool Industries Pvt. Ltd. for herbal product market seeding.</li>
+        <li>Technology Transfer Agreement with ICAR-KVK Ernakulam for herbal bio-agents.</li>
+        <li>Three-year urban greening initiative with Lucknow Development Authority.</li>
+        <li>Collaboration with Tantia University for TBIC wellness and hygiene services.</li>
+      </ul>
+
+      <h2>Impact on Herbal Innovation Ecosystem</h2>
+      <p>This collaboration strengthens the bridge between scientific research institutions and consumer product industries, enabling faster commercialization of validated herbal formulations.</p>
+
+      <p>Frezool Industries is committed to scaling science-backed, eco-conscious, and high-performance consumer solutions for modern households.</p>
+
+      <h2>Conclusion</h2>
+      <p>This partnership marks a major milestone in India's herbal innovation journey, fostering sustainable growth, technological advancement, and eco-friendly product adoption.</p>
+    `
+  },
+
+  // {
+  //   id: 2,
+  //   title: "The Future of Eco-Friendly Home Care",
+  //   category: "Sustainability",
+  //   date: "Oct 12, 2026",
+  //   readTime: "5 min",
+  //   image: "https://picsum.photos/seed/blog1/800/600",
+  //   excerpt: "Discover how biodegradable ingredients are revolutionizing the cleaning industry and reducing environmental impact.",
+  //   content: `
+  //     <p>The FMCG industry is undergoing a rapid transformation driven by environmental awareness and regulatory changes. Consumers are increasingly shifting toward eco-friendly home care products that are safe, effective, and sustainable.</p>
+
+  //     <h2>Rise of Sustainable Cleaning Solutions</h2>
+  //     <p>Traditional cleaning agents often contain phosphates, sulfates, and synthetic chemicals that contribute to water pollution. Modern formulations focus on plant-based surfactants and biodegradable ingredients that naturally break down without harming ecosystems.</p>
+
+  //     <h2>Innovation in Product Formulation</h2>
+  //     <p>At Frezool Industries, research is focused on developing concentrated cleaning solutions that reduce packaging waste, transportation emissions, and water usage during manufacturing.</p>
+
+  //     <h2>Environmental Benefits</h2>
+  //     <ul>
+  //       <li>Reduced carbon footprint through lightweight formulations</li>
+  //       <li>Lower plastic consumption via recyclable packaging</li>
+  //       <li>Safe decomposition in water systems</li>
+  //       <li>Improved indoor air quality with low-VOC formulas</li>
+  //     </ul>
+
+  //     <h2>Future Outlook</h2>
+  //     <p>The future of home care lies in complete sustainability integration—where performance, safety, and environmental responsibility coexist seamlessly.</p>
+  //   `
+  // },
+
+  // {
+  //   id: 3,
+  //   title: "Maintaining Hygiene Standards in FMCG Manufacturing",
+  //   category: "Manufacturing",
+  //   date: "March 28, 2026",
+  //   readTime: "7 min",
+  //   image: "https://picsum.photos/seed/blog2/800/600",
+  //   excerpt: "An in-depth look at strict quality control systems ensuring product safety, consistency, and global compliance.",
+  //   content: `
+  //     <p>In FMCG manufacturing, hygiene and quality control are critical pillars that define product safety and consumer trust.</p>
+
+  //     <h2>Good Manufacturing Practices (GMP)</h2>
+  //     <p>Our facilities follow globally recognized GMP standards that ensure every stage of production meets strict hygiene and safety requirements.</p>
+
+  //     <h2>Clean-In-Place (CIP) Technology</h2>
+  //     <p>Automated CIP systems are used to clean and sterilize production tanks, pipelines, and mixing units without dismantling equipment. This ensures zero contamination risk between batches.</p>
+
+  //     <h2>Multi-Level Quality Assurance</h2>
+  //     <ul>
+  //       <li>Raw material inspection and verification</li>
+  //       <li>In-process quality monitoring</li>
+  //       <li>Final product laboratory testing</li>
+  //       <li>Microbial contamination analysis</li>
+  //     </ul>
+
+  //     <h2>Key Testing Parameters</h2>
+  //     <p>Each product batch undergoes rigorous testing including pH balance, viscosity stability, fragrance consistency, and microbial safety checks.</p>
+
+  //     <h2>Outcome</h2>
+  //     <p>This structured quality system ensures consistency, safety, and trust across every product delivered to the market.</p>
+  //   `
+  // },
+
+  // {
+  //   id: 4,
+  //   title: "5 Essential Tips for a Germ-Free Kitchen",
+  //   category: "Hygiene",
+  //   date: "March 15, 2026",
+  //   readTime: "4 min",
+  //   image: "https://picsum.photos/seed/blog3/800/600",
+  //   excerpt: "Expert-backed hygiene practices to maintain a safe, clean, and bacteria-free kitchen environment.",
+  //   content: `
+  //     <p>The kitchen is one of the most active areas in any household and also one of the most prone to bacterial contamination.</p>
+
+  //     <h2>1. Regular Surface Disinfection</h2>
+  //     <p>High-touch surfaces such as countertops, handles, and switches should be disinfected daily using effective cleaning solutions.</p>
+
+  //     <h2>2. Prevent Cross-Contamination</h2>
+  //     <p>Use separate cutting boards for raw meat, vegetables, and cooked food to avoid bacterial transfer.</p>
+
+  //     <h2>3. Deep Cleaning of Sink Areas</h2>
+  //     <p>Kitchen sinks can harbor harmful bacteria. Regular scrubbing with disinfectant helps maintain hygiene.</p>
+
+  //     <h2>4. Proper Storage of Food</h2>
+  //     <p>Always store food in airtight containers and maintain proper refrigeration temperatures.</p>
+
+  //     <h2>5. Hygiene of Cleaning Tools</h2>
+  //     <p>Sponges and cloths must be sanitized frequently or replaced to avoid bacterial growth.</p>
+
+  //     <h2>Conclusion</h2>
+  //     <p>Maintaining kitchen hygiene is essential for ensuring family health and preventing foodborne illnesses.</p>
+  //   `
+  // },
+
+  // {
+  //   id: 5,
+  //   title: "Innovations in Dish Care Liquids",
+  //   category: "Manufacturing",
+  //   date: "April 30, 2026",
+  //   readTime: "6 min",
+  //   image: "https://picsum.photos/seed/blog4/800/600",
+  //   excerpt: "Exploring the science behind grease removal and development of skin-friendly dishwashing solutions.",
+  //   content: `
+  //     <p>Dishwashing liquid formulation requires a careful balance between cleaning efficiency and skin safety.</p>
+
+  //     <h2>Advanced Surfactant Systems</h2>
+  //     <p>Modern dish care products use a combination of anionic and non-ionic surfactants that effectively break down grease and oil molecules.</p>
+
+  //     <h2>Skin Protection Technology</h2>
+  //     <p>To prevent dryness and irritation, formulations are enriched with natural moisturizers such as Aloe Vera and glycerin-based compounds.</p>
+
+  //     <h2>Performance Testing</h2>
+  //     <ul>
+  //       <li>Grease removal efficiency tests</li>
+  //       <li>Foam stability evaluation</li>
+  //       <li>Skin compatibility testing</li>
+  //       <li>Water hardness performance checks</li>
+  //     </ul>
+
+  //     <h2>Result</h2>
+  //     <p>The outcome is a high-performance cleaning solution that is tough on grease yet gentle on hands.</p>
+  //   `
+  // },
+
+  // {
+  //   id: 6,
+  //   title: "Reducing Plastic Waste in Packaging",
+  //   category: "Sustainability",
+  //   date: "April 10, 2026",
+  //   readTime: "5 min",
+  //   image: "https://picsum.photos/seed/blog5/800/600",
+  //   excerpt: "Sustainable packaging strategies aimed at reducing plastic waste in FMCG industries.",
+  //   content: `
+  //     <p>Packaging plays a crucial role in product protection but is also a major contributor to environmental waste.</p>
+
+  //     <h2>Shift to Recyclable Materials</h2>
+  //     <p>We are adopting mono-material HDPE packaging to ensure easier recycling and reduced environmental impact.</p>
+
+  //     <h2>Lightweight Engineering</h2>
+  //     <p>Reducing bottle weight while maintaining durability helps significantly cut down plastic usage at scale.</p>
+
+  //     <h2>Eco-Friendly Innovation</h2>
+  //     <ul>
+  //       <li>Use of recycled plastics (rHDPE)</li>
+  //       <li>Reduction in packaging thickness</li>
+  //       <li>Optimized transport efficiency</li>
+  //       <li>Lower carbon emissions in logistics</li>
+  //     </ul>
+
+  //     <h2>Future Vision</h2>
+  //     <p>The long-term goal is to move toward a circular economy model where packaging is continuously reused and recycled.</p>
+  //   `
+  // }
+];
 
     const gridContainer = document.getElementById('posts-grid');
     const gridView = document.getElementById('blog-grid-view');
