@@ -2,722 +2,691 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Frezool Industries Private Limited – Insights on hygiene, FMCG manufacturing, and sustainability innovations." />
-  <title>Blog | Frezool Industries Private Limited</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { inter: ["Inter", "sans-serif"] },
-          colors: {
-            navy: { 50: "#f0f3f9", 100: "#dce3f0", 200: "#b8c7e1", 300: "#8da5cc", 400: "#6483b4", 500: "#4567a0", 600: "#37578e", 700: "#2d4773", 800: "#1a2744", 900: "#0f1b2d", 950: "#0a1628" },
-            brand: { 50: "#ecfdf5", 100: "#d1fae5", 200: "#a7f3d0", 300: "#6ee7b7", 400: "#34d399", 500: "#10b981", 600: "#059669", 700: "#047857", 800: "#065f46", 900: "#064e3b" },
-          },
-        },
-      },
-    };
-  </script>
-  <style>
-    /* Custom Styles for Blog Transitions */
-    .page-transition {
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .blog-content h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #0f1b2d; }
-    .blog-content h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #2d4773; }
-    .blog-content p { margin-bottom: 1.25rem; line-height: 1.75; color: #4b5563; }
-    .blog-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; color: #4b5563; }
-    .blog-content li { margin-bottom: 0.5rem; }
-    .blog-content blockquote { border-left: 4px solid #10b981; padding-left: 1rem; font-style: italic; color: #2d4773; margin: 1.5rem 0; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Frezool Industries Private Limited – Insights on hygiene, FMCG manufacturing, and sustainability innovations." />
+    <title>Blog | Frezool Industries Private Limited</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { inter: ["Inter", "sans-serif"] },
+                    colors: {
+                        navy: { 50: "#f0f3f9", 100: "#dce3f0", 200: "#b8c7e1", 300: "#8da5cc", 400: "#6483b4", 500: "#4567a0", 600: "#37578e", 700: "#2d4773", 800: "#1a2744", 900: "#0f1b2d", 950: "#0a1628" },
+                        brand: { 50: "#ecfdf5", 100: "#d1fae5", 200: "#a7f3d0", 300: "#6ee7b7", 400: "#34d399", 500: "#10b981", 600: "#059669", 700: "#047857", 800: "#065f46", 900: "#064e3b" },
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        /* Custom Styles matching the Sustainability design */
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f1b2d 0%, #1a2744 100%);
+            position: relative;
+        }
+
+
+        /* .hero-pattern {
+            background-image: radial-gradient(#1a2744 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Blog Specific Styles */
+        .page-transition {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .blog-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #0f1b2d;
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #2d4773;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+            color: #4b5563;
+        }
+
+        .blog-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: #4b5563;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid #10b981;
+            padding-left: 1rem;
+            font-style: italic;
+            color: #2d4773;
+            margin: 1.5rem 0;
+        }
+
+        /* Utility for reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.97) !important;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THVN16CW16"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-THVN16CW16');
+    </script>
 </head>
 
 <body class="bg-white text-navy-900 antialiased" data-page="blog">
-  <!-- NAVIGATION -->
-  <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex items-center justify-between h-20">
-        <a href="index.html" class="relative block shrink-0" style="width:150px;height:50px;">
-          <img
-            src="https://raw.githubusercontent.com/frezoolindustries/frezoolindustries.com/refs/heads/main/images/Frezool_Industries_Logo_white-removebg-preview.png"
-            alt="Frezool Industries Logo"
-            class="logo-default absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-300" />
-          <img
-            src="https://github.com/frezoolindustries/frezoolindustries.com/blob/main/images/Frezool_Industries_Logo-removebg-preview.png?raw=true"
-            alt="Frezool Industries Logo"
-            class="logo-scrolled absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-300 opacity-0" />
-        </a>
-        <div class="hidden lg:flex items-center gap-1">
-          <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg" data-nav="home">Home</a>
-          <a href="about.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg" data-nav="about">About Us</a>
-          <a href="business.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg" data-nav="business">Our
-            Business</a>
-          <div class="dropdown relative">
-            <button class="nav-link px-4 py-2 text-sm font-medium rounded-lg flex items-center gap-1">Brands <i
-                data-lucide="chevron-down" class="w-3.5 h-3.5"></i></button>
-            <div class="dropdown-menu absolute top-full left-0 pt-2">
-              <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[200px]">
-                <a href="phenora.html"
-                  class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-brand-50 transition-colors">
-                  <div class="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center"><i
-                      data-lucide="sparkles" class="w-4 h-4 text-brand-600"></i></div>
-                  <span class="text-sm font-medium text-navy-800">Phenora</span>
+
+    <!-- NAVIGATION -->
+    <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all nav-scrolled duration-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="relative block shrink-0" style="width:150px;height:50px;">
+                    <img src="https://raw.githubusercontent.com/frezoolindustries/frezoolindustries.com/refs/heads/main/images/Frezool_Industries_Logo_white-removebg-preview.png"
+                        alt="Frezool Industries Logo"
+                        class="logo-default absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-300" />
+                    <img src="https://github.com/frezoolindustries/frezoolindustries.com/blob/main/images/Frezool_Industries_Logo-removebg-preview.png?raw=true"
+                        alt="Frezool Industries Logo"
+                        class="logo-scrolled absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-300 opacity-0" />
                 </a>
-              </div>
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
+                        data-nav="home">Home</a>
+                    <a href="about.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
+                        data-nav="about">About Us</a>
+                    <a href="business.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
+                        data-nav="business">Our
+                        Business</a>
+                    <div class="dropdown relative">
+                        <button class="nav-link px-4 py-2 text-sm font-medium rounded-lg flex items-center gap-1">Brands
+                            <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i></button>
+                        <div class="dropdown-menu absolute top-full left-0 pt-2">
+                            <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[200px]">
+                                <a href="phenora.html"
+                                    class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-brand-50 transition-colors">
+                                    <div class="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center"><i
+                                            data-lucide="sparkles" class="w-4 h-4 text-brand-600"></i></div>
+                                    <span class="text-sm font-medium text-navy-800">Phenora</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="manufacturing.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
+                        data-nav="manufacturing">Manufacturing</a>
+                    <a href="certifications.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
+                        data-nav="certifications">Compliance</a>
+                    <a href="sustainability.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
+                        data-nav="sustainability">Sustainability</a>
+                    <div class="dropdown relative">
+                        <button class="nav-link px-4 py-2 text-sm font-medium rounded-lg flex items-center gap-1">More
+                            <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i></button>
+                        <div class="dropdown-menu absolute top-full right-0 pt-2">
+                            <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[220px]">
+                                <a href="careers.html"
+                                    class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors"><i
+                                        data-lucide="briefcase" class="w-4 h-4 text-navy-400"></i><span
+                                        class="text-sm font-medium">Careers</span></a>
+                                <a href="investors.html"
+                                    class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors"><i
+                                        data-lucide="bar-chart-3" class="w-4 h-4 text-navy-400"></i><span
+                                        class="text-sm font-medium">Investors</span></a>
+                                <div class="border-t border-gray-100 my-1"></div>
+                                <a href="privacy.html"
+                                    class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors"><i
+                                        data-lucide="shield" class="w-4 h-4 text-navy-400"></i><span
+                                        class="text-sm font-medium">Legal</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html"
+                        class="ml-3 bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 text-sm font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-brand-500/25">Contact
+                        Us</a>
+                </div>
+                <button onclick="toggleMobileMenu()"
+                    class="lg:hidden p-2 rounded-lg hover:bg-navy-50 transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6 nav-icon-color"></i>
+                </button>
             </div>
-          </div>
-          <a href="manufacturing.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
-            data-nav="manufacturing">Manufacturing</a>
-          <a href="certifications.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
-            data-nav="certifications">Compliance</a>
-          <a href="sustainability.html" class="nav-link px-4 py-2 text-sm font-medium rounded-lg"
-            data-nav="sustainability">Sustainability</a>
-          <div class="dropdown relative">
-            <button class="nav-link px-4 py-2 text-sm font-medium rounded-lg flex items-center gap-1">More <i
-                data-lucide="chevron-down" class="w-3.5 h-3.5"></i></button>
-            <div class="dropdown-menu absolute top-full right-0 pt-2">
-              <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[220px]">
-                <!-- BLOG LINK ADDED HERE -->
-                <a href="blog.html"
-                  class="flex items-center gap-3 px-4 py-3 rounded-lg bg-navy-50 text-navy-700 transition-colors"><i
-                    data-lucide="newspaper" class="w-4 h-4 text-navy-400"></i><span
-                    class="text-sm font-medium">Blog</span></a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileOverlay" class="mobile-overlay fixed inset-0 bg-black/40 z-50" onclick="toggleMobileMenu()"></div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="mobile-menu fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white z-50 overflow-y-auto shadow-2xl">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+                <a href="index.html" class="relative block shrink-0" style="width:120px;height:40px;">
+                    <img src="https://github.com/frezoolindustries/frezoolindustries.com/blob/main/images/Frezool_Industries_Logo-removebg-preview.png?raw=true"
+                        alt="Frezool Industries Logo" class="absolute top-0 left-0 w-full h-full object-contain" />
+                </a>
+                <button onclick="toggleMobileMenu()" class="p-2 rounded-lg hover:bg-gray-100"><i data-lucide="x"
+                        class="w-5 h-5"></i></button>
+            </div>
+            <div class="space-y-1">
+                <a href="index.html"
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Home</a>
+                <a href="about.html"
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">About
+                    Us</a>
+                <a href="business.html"
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Our
+                    Business</a>
+                <a href="phenora.html"
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Brands —
+                    Phenora</a>
+                <a href="manufacturing.html"
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Manufacturing
+                    &
+                    Quality</a>
+                <a href="certifications.html"
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Certifications
+                    &
+                    Compliance</a>
+                <a href="sustainability.html"
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Sustainability</a>
                 <a href="careers.html"
-                  class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors"><i
-                    data-lucide="briefcase" class="w-4 h-4 text-navy-400"></i><span
-                    class="text-sm font-medium">Careers</span></a>
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Careers</a>
                 <a href="investors.html"
-                  class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors"><i
-                    data-lucide="bar-chart-3" class="w-4 h-4 text-navy-400"></i><span
-                    class="text-sm font-medium">Investors</span></a>
-                <div class="border-t border-gray-100 my-1"></div>
-                <a href="privacy.html"
-                  class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-navy-50 transition-colors"><i
-                    data-lucide="shield" class="w-4 h-4 text-navy-400"></i><span
-                    class="text-sm font-medium">Legal</span></a>
-              </div>
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Investors</a>
+                <a href="contact.html"
+                    class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Contact Us</a>
+                <div class="border-t border-gray-100 my-3 pt-3">
+                    <p class="px-4 text-xs font-semibold text-navy-400 uppercase tracking-wider mb-2">Legal</p>
+                    <a href="privacy.html"
+                        class="block px-4 py-2.5 text-sm text-navy-500 hover:text-navy-700 hover:bg-navy-50 rounded-lg">Privacy
+                        Policy</a>
+                    <a href="terms.html"
+                        class="block px-4 py-2.5 text-sm text-navy-500 hover:text-navy-700 hover:bg-navy-50 rounded-lg">Terms
+                        &
+                        Conditions</a>
+                    <a href="disclaimer.html"
+                        class="block px-4 py-2.5 text-sm text-navy-500 hover:text-navy-700 hover:bg-navy-50 rounded-lg">Disclaimer</a>
+                    <a href="cookies.html"
+                        class="block px-4 py-2.5 text-sm text-navy-500 hover:text-navy-700 hover:bg-navy-50 rounded-lg">Cookie
+                        Policy</a>
+                </div>
             </div>
-          </div>
-          <a href="contact.html"
-            class="ml-3 bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 text-sm font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-brand-500/25">Contact
-            Us</a>
+            <div class="mt-8">
+                <a href="contact.html"
+                    class="block w-full bg-brand-500 text-white text-center px-5 py-3 text-sm font-semibold rounded-lg">Contact
+                    Us</a>
+            </div>
         </div>
-        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg hover:bg-navy-50 transition-colors">
-          <i data-lucide="menu" class="w-6 h-6 nav-icon-color"></i>
-        </button>
-      </div>
     </div>
-  </nav>
 
-  <!-- Mobile Menu Overlay -->
-  <div id="mobileOverlay" class="mobile-overlay fixed inset-0 bg-black/40 z-50 hidden" onclick="toggleMobileMenu()"></div>
-  <!-- Mobile Menu -->
-  <div id="mobileMenu"
-    class="mobile-menu fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white z-50 overflow-y-auto shadow-2xl translate-x-full transition-transform duration-300">
-    <div class="p-6">
-      <div class="flex items-center justify-between mb-8">
-        <a href="index.html" class="relative block shrink-0" style="width:120px;height:40px;">
-          <img
-            src="https://github.com/frezoolindustries/frezoolindustries.com/blob/main/images/Frezool_Industries_Logo-removebg-preview.png?raw=true"
-            alt="Frezool Industries Logo" class="absolute top-0 left-0 w-full h-full object-contain" />
-        </a>
-        <button onclick="toggleMobileMenu()" class="p-2 rounded-lg hover:bg-gray-100"><i data-lucide="x"
-            class="w-5 h-5"></i></button>
-      </div>
-      <div class="space-y-1">
-        <a href="index.html"
-          class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Home</a>
-        <a href="about.html" class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">About
-          Us</a>
-        <a href="business.html"
-          class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Our Business</a>
-        <a href="phenora.html"
-          class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Brands — Phenora</a>
-        <a href="manufacturing.html"
-          class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Manufacturing &
-          Quality</a>
-        <a href="blog.html"
-          class="block px-4 py-3 text-sm font-medium rounded-lg bg-navy-50 text-navy-900">Blog & Insights</a>
-        <a href="careers.html"
-          class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Careers</a>
-        <a href="contact.html"
-          class="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-navy-50 text-navy-700">Contact Us</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== PAGE: BLOG GRID VIEW ===================== -->
-  <div id="blog-grid-view" class="page-section page-transition">
-    <section class="bg-navy-50 pt-32 pb-20 border-b border-navy-100">
-      <div class="max-w-7xl mx-auto px-6 text-center">
-        <span class="section-label mb-4 inline-block"><span class="w-2 h-2 bg-brand-500 rounded-full"></span>
-          Insights</span>
-        <h1 class="text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight mb-6">
-          News, Views & Innovations
-        </h1>
-        <p class="text-lg text-navy-600 max-w-2xl mx-auto">
-          Stay updated with the latest trends in FMCG, hygiene manufacturing, and sustainability initiatives at Frezool Industries.
-        </p>
-      </div>
+    <!-- ===================== HERO SECTION (Matched to Sustainability Design) ===================== -->
+    <section class="hero-gradient hero-pattern pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl reveal">
+                <span
+                    class="section-label mb-6 inline-block text-white/80 text-sm font-semibold tracking-wide uppercase"><span
+                        class="w-2 h-2 bg-brand-500 rounded-full inline-block mr-2"></span>
+                    News & Views</span>
+                <h1 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Insights & Innovations
+                </h1>
+                <p class="text-lg text-navy-200">
+                    Stay updated with the latest trends in FMCG, hygiene manufacturing, and sustainability initiatives
+                    at Frezool Industries.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <!-- Category Filters -->
-        <div class="flex flex-wrap justify-center gap-3 mb-12">
-          <button onclick="filterPosts('all', this)" class="filter-btn active px-6 py-2 rounded-full text-sm font-semibold bg-navy-900 text-white transition-colors">All Posts</button>
-          <button onclick="filterPosts('Manufacturing', this)" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold bg-navy-50 text-navy-600 hover:bg-navy-100 transition-colors">Manufacturing</button>
-          <button onclick="filterPosts('Sustainability', this)" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold bg-navy-50 text-navy-600 hover:bg-navy-100 transition-colors">Sustainability</button>
-          <button onclick="filterPosts('Hygiene', this)" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold bg-navy-50 text-navy-600 hover:bg-navy-100 transition-colors">Hygiene Tips</button>
-        </div>
+    <!-- ===================== PAGE: BLOG GRID VIEW ===================== -->
+    <div id="blog-grid-view" class="page-section page-transition bg-white">
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Category Filters -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button onclick="filterPosts('all', this)"
+                        class="filter-btn active px-6 py-2 rounded-full text-sm font-semibold bg-navy-900 text-white transition-colors shadow-md shadow-navy-900/20">All
+                        Posts</button>
+                    <button onclick="filterPosts('Manufacturing', this)"
+                        class="filter-btn px-6 py-2 rounded-full text-sm font-semibold bg-white border border-navy-100 text-navy-600 hover:bg-navy-50 hover:border-navy-200 transition-all">Manufacturing</button>
+                    <button onclick="filterPosts('Sustainability', this)"
+                        class="filter-btn px-6 py-2 rounded-full text-sm font-semibold bg-white border border-navy-100 text-navy-600 hover:bg-navy-50 hover:border-navy-200 transition-all">Sustainability</button>
+                    <button onclick="filterPosts('Innovation', this)"
+                        class="filter-btn px-6 py-2 rounded-full text-sm font-semibold bg-white border border-navy-100 text-navy-600 hover:bg-navy-50 hover:border-navy-200 transition-all">Innovation</button>
+                </div>
 
-        <!-- Blog Grid Container -->
-        <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Posts will be injected here via JavaScript -->
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ===================== SINGLE BLOG POST VIEW (Hidden Initially) ===================== -->
-  <article id="single-post-view" class="hidden page-section page-transition">
-    <section class="pt-32 pb-12 bg-navy-50">
-      <div class="max-w-4xl mx-auto px-6">
-        <button onclick="closePost()" class="flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-brand-600 mb-8 transition-colors">
-          <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to all posts
-        </button>
-        
-        <div class="mb-8">
-          <span id="post-category-badge" class="inline-block px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-xs font-bold uppercase tracking-wide mb-4">Category</span>
-          <h1 id="post-title" class="text-3xl lg:text-5xl font-extrabold text-navy-900 tracking-tight mb-6">Post Title</h1>
-          
-          <div class="flex items-center gap-4 text-sm text-navy-500">
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-full bg-navy-200 overflow-hidden">
-                 <img src="https://picsum.photos/seed/author/100/100" class="w-full h-full object-cover" alt="Author">
-              </div>
-              <span class="font-medium text-navy-700">Marketing Team</span>
+                <!-- Blog Grid Container -->
+                <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Posts will be injected here via JavaScript -->
+                </div>
             </div>
-            <span>&bull;</span>
-            <span id="post-date">Date</span>
-            <span>&bull;</span>
-            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> <span id="post-read-time">5 min read</span></span>
-          </div>
-        </div>
-        
-        <div class="rounded-2xl overflow-hidden shadow-xl mb-12">
-          <img id="post-image" src="" alt="Blog Cover" class="w-full h-[400px] object-cover">
-        </div>
-
-        <div class="prose prose-lg prose-navy max-w-none blog-content">
-          <div id="post-body">
-            <!-- Content injected via JS -->
-          </div>
-        </div>
-
-        <div class="mt-16 pt-8 border-t border-navy-100">
-          <h4 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-4">Share this article</h4>
-          <div class="flex gap-3">
-            <a href="#" class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="w-10 h-10 rounded-lg bg-sky-50 text-sky-500 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="w-10 h-10 rounded-lg bg-green-50 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-all"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </article>
-
-  <!-- FOOTER -->
-  <footer class="bg-navy-950 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-16">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <div class="lg:col-span-1">
-          <a href="index.html" class="flex items-center gap-3 group mb-6"><img
-              src="https://raw.githubusercontent.com/frezoolindustries/frezoolindustries.com/refs/heads/main/images/Frezool_Industries_Logo_white-removebg-preview.png"
-              style="width:150px;" alt="Frezool Industries Logo"></a>
-          <p class="text-sm text-navy-300 leading-relaxed mb-6">Innovating Hygiene. Delivering Trust. An India-based
-            FMCG manufacturing company focused on hygiene and home care solutions.</p>
-          <div class="flex gap-3">
-            <a href="https://www.linkedin.com/company/frezool-industries-private-limited/"
-              class="w-9 h-9 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"><i
-                class="fab fa-linkedin-in text-white"></i></a>
-            <a href="https://www.youtube.com/@frezoolindustries"
-              class="w-9 h-9 bg-white/10 hover:bg-red-500 rounded-lg flex items-center justify-center transition-colors"><i
-                class="fab fa-youtube text-white"></i></a>
-            <a href="https://www.facebook.com/people/Frezoolindustries/61586852456354/"
-              class="w-9 h-9 bg-white/10 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors"><i
-                class="fab fa-facebook-f text-white"></i></a>
-            <a href="https://www.instagram.com/frezoolindustries"
-              class="w-9 h-9 bg-white/10 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors"><i
-                class="fab fa-instagram text-white"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">Quick Links</h4>
-          <ul class="space-y-3">
-            <li><a href="index.html" class="text-sm text-navy-400 hover:text-white transition-colors">Home</a></li>
-            <li><a href="about.html" class="text-sm text-navy-400 hover:text-white transition-colors">About Us</a></li>
-            <li><a href="business.html" class="text-sm text-navy-400 hover:text-white transition-colors">Our Business</a></li>
-            <li><a href="phenora.html" class="text-sm text-navy-400 hover:text-white transition-colors">Phenora Brand</a></li>
-            <li><a href="manufacturing.html" class="text-sm text-navy-400 hover:text-white transition-colors">Manufacturing</a></li>
-            <li><a href="certifications.html" class="text-sm text-navy-400 hover:text-white transition-colors">Certifications</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">Company</h4>
-          <ul class="space-y-3">
-            <li><a href="blog.html" class="text-sm text-navy-400 hover:text-white transition-colors">Blog</a></li>
-            <li><a href="careers.html" class="text-sm text-navy-400 hover:text-white transition-colors">Careers</a></li>
-            <li><a href="investors.html" class="text-sm text-navy-400 hover:text-white transition-colors">Investor Information</a></li>
-            <li><a href="contact.html" class="text-sm text-navy-400 hover:text-white transition-colors">Contact Us</a></li>
-          </ul>
-          <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-4 mt-8">Legal</h4>
-          <ul class="space-y-3">
-            <li><a href="privacy.html" class="text-sm text-navy-400 hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="terms.html" class="text-sm text-navy-400 hover:text-white transition-colors">Terms & Conditions</a></li>
-            <li><a href="disclaimer.html" class="text-sm text-navy-400 hover:text-white transition-colors">Disclaimer</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">Contact</h4>
-          <div class="space-y-4">
-            <div class="flex gap-3"><i data-lucide="building-2" class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
-              <div>
-                <p class="text-sm text-navy-300">Frezool Industries Private Limited</p>
-                <p class="text-xs text-navy-500">Upper Ground Floor, 1166 Lekhraj Dollar, Faizabad Road, Indira Nagar,
-                  Lucknow, Uttar Pradesh, 226016, India</p>
-              </div>
-            </div>
-            <div class="flex gap-3"><i data-lucide="mail" class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
-              <div>
-                <p class="text-sm text-navy-300">info@frezoolindustries.com</p>
-                <p class="text-xs text-navy-500">Official Email</p>
-              </div>
-            </div>
-            <div class="flex gap-3"><i data-lucide="phone" class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
-              <div>
-                <p class="text-sm text-navy-300">+915224750257</p>
-                <p class="text-xs text-navy-500">Phone</p>
-              </div>
-            </div>
-          </div>
-          <div class="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
-            <p class="text-[10px] font-semibold text-navy-400 uppercase tracking-wider mb-1">CIN</p>
-            <p class="text-xs text-navy-200 font-mono">U20231UP2025PTC236832</p>
-          </div>
-        </div>
-      </div>
+        </section>
     </div>
-    <div class="border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-6 py-6">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p class="text-xs text-navy-500 text-center md:text-left">© <span id="currentYear"></span> Frezool Industries
-            Private Limited. All rights reserved. Created by <a href="https://buynsofts.in"
-              style="color:yellow;">Buynsofts.in</a></p>
-          <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-navy-500">
-            <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a><span
-              class="text-navy-700">·</span>
-            <a href="terms.html" class="hover:text-white transition-colors">Terms</a><span
-              class="text-navy-700">·</span>
-            <a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a><span
-              class="text-navy-700">·</span>
-            <a href="cookies.html" class="hover:text-white transition-colors">Cookies</a>
-          </div>
+
+    <!-- ===================== SINGLE BLOG POST VIEW (Hidden Initially) ===================== -->
+    <article id="single-post-view" class="hidden page-section page-transition bg-white">
+        <section class="pt-32 pb-12 bg-navy-50/50">
+            <div class="max-w-4xl mx-auto px-6">
+                <button onclick="closePost()"
+                    class="flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-brand-600 mb-8 transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to all posts
+                </button>
+
+                <div class="mb-8">
+                    <span id="post-category-badge"
+                        class="inline-block px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-xs font-bold uppercase tracking-wide mb-4">Category</span>
+                    <h1 id="post-title" class="text-3xl lg:text-5xl font-extrabold text-navy-900 tracking-tight mb-6">
+                        Post Title</h1>
+
+                    <div class="flex items-center gap-4 text-sm text-navy-500">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-navy-200 overflow-hidden">
+                                <img src="https://picsum.photos/seed/author/100/100" class="w-full h-full object-cover"
+                                    alt="Author">
+                            </div>
+                            <span class="font-medium text-navy-700">Marketing Team</span>
+                        </div>
+                        <span>&bull;</span>
+                        <span id="post-date">Date</span>
+                        <span>&bull;</span>
+                        <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> <span
+                                id="post-read-time">5 min read</span></span>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-xl mb-12 border border-navy-100">
+                    <img id="post-image" src="" alt="Blog Cover" class="w-full h-[400px] object-cover">
+                </div>
+
+                <div class="prose prose-lg prose-navy max-w-none blog-content">
+                    <div id="post-body">
+                        <!-- Content injected via JS -->
+                    </div>
+                </div>
+
+                <div class="mt-16 pt-8 border-t border-navy-100">
+                    <h4 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-4">Share this article</h4>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-lg bg-sky-50 text-sky-500 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-lg bg-green-50 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-all"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!-- FOOTER (Matched to Reference Design) -->
+    <footer class="bg-navy-950 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-3 group mb-6"><img
+                            src="https://raw.githubusercontent.com/frezoolindustries/frezoolindustries.com/refs/heads/main/images/Frezool_Industries_Logo_white-removebg-preview.png"
+                            style="width:150px;" alt="Frezool Industries Logo"></a>
+                    <p class="text-sm text-navy-300 leading-relaxed mb-6">Innovating Hygiene. Delivering Trust. An
+                        India-based
+                        FMCG manufacturing company focused on hygiene and home care solutions.</p>
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/frezool-industries-private-limited/"
+                            class="w-9 h-9 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"><i
+                                class="fab fa-linkedin-in text-white"></i></a>
+                        <a href="https://www.youtube.com/@frezoolindustries"
+                            class="w-9 h-9 bg-white/10 hover:bg-red-500 rounded-lg flex items-center justify-center transition-colors"><i
+                                class="fab fa-youtube text-white"></i></a>
+                        <a href="https://www.facebook.com/people/Frezoolindustries/61586852456354/"
+                            class="w-9 h-9 bg-white/10 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors"><i
+                                class="fab fa-facebook-f text-white"></i></a>
+                        <a href="https://www.instagram.com/frezoolindustries"
+                            class="w-9 h-9 bg-white/10 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors"><i
+                                class="fab fa-instagram text-white"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-sm text-navy-400 hover:text-white transition-colors">About
+                                Us</a></li>
+                        <li><a href="business.html" class="text-sm text-navy-400 hover:text-white transition-colors">Our
+                                Business</a></li>
+                        <li><a href="phenora.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Phenora Brand</a></li>
+                        <li><a href="manufacturing.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Manufacturing &
+                                Quality</a></li>
+                        <li><a href="certifications.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Certifications</a></li>
+                        <li><a href="sustainability.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="blog.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="careers.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="investors.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Investor
+                                Information</a></li>
+                        <li><a href="contact.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Contact Us</a>
+                        </li>
+                    </ul>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-4 mt-8">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="terms.html" class="text-sm text-navy-400 hover:text-white transition-colors">Terms
+                                &
+                                Conditions</a></li>
+                        <li><a href="disclaimer.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Disclaimer</a></li>
+                        <li><a href="cookies.html"
+                                class="text-sm text-navy-400 hover:text-white transition-colors">Cookie
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-navy-300 mb-6">Contact</h4>
+                    <div class="space-y-4">
+                        <div class="flex gap-3"><i data-lucide="building-2"
+                                class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-sm text-navy-300">Frezool Industries Private Limited</p>
+                                <p class="text-xs text-navy-500">Upper Ground Floor, 1166 Lekhraj Dollar, Faizabad Road,
+                                    Indira Nagar,
+                                    Lucknow, Uttar Pradesh, 226016, India</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3"><i data-lucide="mail"
+                                class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-sm text-navy-300">info@frezoolindustries.com</p>
+                                <p class="text-xs text-navy-500">Official Email</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3"><i data-lucide="phone"
+                                class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-sm text-navy-300">+915224750257</p>
+                                <p class="text-xs text-navy-500">Phone</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
+                        <p class="text-[10px] font-semibold text-navy-400 uppercase tracking-wider mb-1">CIN</p>
+                        <p class="text-xs text-navy-200 font-mono">U20231UP2025PTC236832</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+        <div class="border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-6 py-6">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-xs text-navy-500 text-center md:text-left">© <span id="currentYear"></span> Frezool
+                        Industries
+                        Private Limited. All rights reserved. Created by <a href="https://buynsofts.in"
+                            style="color:yellow;">Buynsofts.in</a></p>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-navy-500">
+                        <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a><span
+                            class="text-navy-700">·</span>
+                        <a href="terms.html" class="hover:text-white transition-colors">Terms</a><span
+                            class="text-navy-700">·</span>
+                        <a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a><span
+                            class="text-navy-700">·</span>
+                        <a href="cookies.html" class="hover:text-white transition-colors">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Back to Top -->
-  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    class="fixed bottom-6 left-6 z-40 w-11 h-11 bg-navy-900 hover:bg-navy-800 text-white rounded-xl shadow-lg flex items-center justify-center transition-all opacity-0 translate-y-4 pointer-events-none"
-    aria-label="Back to top"><i data-lucide="chevron-up" class="w-5 h-5"></i></button>
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+    <!-- Back to Top -->
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-6 left-6 z-40 w-11 h-11 bg-navy-900 hover:bg-navy-800 text-white rounded-xl shadow-lg flex items-center justify-center transition-all opacity-0 translate-y-4 pointer-events-none"
+        aria-label="Back to top"><i data-lucide="chevron-up" class="w-5 h-5"></i></button>
 
-  <!-- LOGIC -->
-  <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
+    <!-- LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
 
-    // Current Year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Current Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Mobile Menu Logic
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      const overlay = document.getElementById('mobileOverlay');
-      menu.classList.toggle('translate-x-full');
-      overlay.classList.toggle('hidden');
-    }
+        // Mobile Menu Logic
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('mobileOverlay');
+            menu.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
 
-    // Sticky Nav Logic
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('mainNav');
-      const defaultLogo = document.querySelector('.logo-default');
-      const scrolledLogo = document.querySelector('.logo-scrolled');
-      const iconColor = document.querySelector('.nav-icon-color');
+        // Sticky Nav Logic (Matching Reference Behavior)
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            const defaultLogo = document.querySelector('.logo-default');
+            const scrolledLogo = document.querySelector('.logo-scrolled');
+            const iconColor = document.querySelector('.nav-icon-color');
+            const navLinks = document.querySelectorAll('.nav-link:not(.dropdown button)'); // Select top level links
 
-      if (window.scrollY > 20) {
-        nav.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
-        defaultLogo.classList.add('opacity-0');
-        scrolledLogo.classList.remove('opacity-0');
-        if (iconColor) iconColor.classList.add('text-navy-900');
-      } else {
-        nav.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
-        defaultLogo.classList.remove('opacity-0');
-        scrolledLogo.classList.add('opacity-0');
-        if (iconColor) iconColor.classList.remove('text-navy-900');
-      }
-      
-      // Back to top visibility
-      const backToTop = document.getElementById('backToTop');
-      if (window.scrollY > 500) {
-        backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-      } else {
-        backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-      }
-    });
+            // if (window.scrollY > 20) {
+            //     nav.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+            //     defaultLogo.classList.add('opacity-0');
+            //     scrolledLogo.classList.remove('opacity-0');
 
-    // =================== BLOG DATA & LOGIC ===================
+            //     // Change text color for scrolled state
+            //     navLinks.forEach(link => {
+            //         link.classList.remove('text-white', 'hover:text-navy-900', 'hover:bg-white/10');
+            //         link.classList.add('text-navy-700', 'hover:text-brand-600', 'hover:bg-navy-50');
+            //     });
 
-    // const blogPosts = [
-    //   {
-    //     id: 1,
-    //     title: "The Future of Eco-Friendly Home Care",
-    //     category: "Sustainability",
-    //     date: "Oct 12, 2026",
-    //     readTime: "4 min",
-    //     image: "https://picsum.photos/seed/blog1/800/600",
-    //     excerpt: "Discover how biodegradable ingredients are revolutionizing the cleaning industry and reducing our carbon footprint.",
-    //     content: `
-    //       <p>The FMCG industry is undergoing a massive transformation, driven by consumer demand for greener products. At Frezool Industries, we recognize that the future of home care lies in sustainability without compromising on efficacy.</p>
-    //       <h2>Why Biodegradability Matters</h2>
-    //       <p>Traditional cleaning agents often contain phosphates and harsh chemicals that can linger in ecosystems. By switching to plant-based surfactants and biodegradable polymers, we ensure that our products break down harmlessly after use.</p>
-    //       <blockquote>"Sustainability is not just a buzzword; it is a responsibility towards the planet we share."</blockquote>
-    //       <h3>Our Commitment</h3>
-    //       <ul>
-    //         <li>Using recycled plastic for packaging (Phenora bottles).</li>
-    //         <li>Reducing water consumption in our manufacturing lines.</li>
-    //         <li>Sourcing raw materials from ethical suppliers.</li>
-    //       </ul>
-    //       <p>As we move forward, our R&D is focused on creating concentrates that reduce shipping weight and carbon emissions, aligning with our vision of a cleaner future.</p>
-    //     `
-    //   },
-    //   {
-    //     id: 2,
-    //     title: "Maintaining Hygiene Standards in FMCG Manufacturing",
-    //     category: "Manufacturing",
-    //     date: "March 28, 2026",
-    //     readTime: "6 min",
-    //     image: "https://picsum.photos/seed/blog2/800/600",
-    //     excerpt: "A deep dive into the rigorous quality control protocols we follow to ensure every bottle is safe and effective.",
-    //     content: `
-    //       <p>In the world of liquid manufacturing, hygiene is paramount. A single contamination can have severe repercussions. That is why our facility in Lucknow operates under strict GMP (Good Manufacturing Practices).</p>
-    //       <h2>The Clean-In-Place (CIP) System</h2>
-    //       <p>We utilize automated CIP systems to sterilize our tanks and piping lines between production batches. This eliminates human error and ensures that no residue remains.</p>
-    //       <h3>Quality Checks at Every Stage</h3>
-    //       <p>From raw material intake to final packaging, our quality assurance team conducts:</p>
-    //       <ul>
-    //         <li><strong>Microbial Testing:</strong> Ensuring products are free from harmful bacteria.</li>
-    //         <li><strong>pH Balance:</strong> Critical for skin-friendly products like Phenora.</li>
-    //         <li><strong>Viscosity Checks:</strong> Ensuring the perfect flow and consistency.</li>
-    //       </ul>
-    //       <p>Our commitment to quality builds trust with our partners and consumers alike.</p>
-    //     `
-    //   },
-    //   {
-    //     id: 3,
-    //     title: "5 Tips for a Germ-Free Kitchen",
-    //     category: "Hygiene",
-    //     date: "March 15, 2026",
-    //     readTime: "3 min",
-    //     image: "https://picsum.photos/seed/blog3/800/600",
-    //     excerpt: "The kitchen is the heart of the home, but also a hotspot for bacteria. Here is how to keep it sparkling clean.",
-    //     content: `
-    //       <p>Kitchen hygiene is essential for preventing foodborne illnesses. Here are five simple tips recommended by our experts:</p>
-    //       <h2>1. Disinfect High-Touch Surfaces</h2>
-    //       <p>Cabinet handles, fridge doors, and switches are touched constantly. Wipe them down daily with a trusted disinfectant.</p>
-    //       <h2>2. Separate Cutting Boards</h2>
-    //       <p>Always use separate boards for raw meat and vegetables to avoid cross-contamination.</p>
-    //       <h2>3. The Sink Strategy</h2>
-    //       <p>Your kitchen sink can harbor more E. coli than a toilet seat. Use a heavy-duty cleaner and scrub it regularly.</p>
-    //       <h2>4. Wash Reusable Towels</h2>
-    //       <p>Damp towels are a breeding ground for germs. Change them daily and wash in hot water.</p>
-    //       <h2>5. Don't Forget the Sponge</h2>
-    //       <p>Sanitize your sponge by microwaving it for 2 minutes or replacing it weekly.</p>
-    //     `
-    //   },
-    //   {
-    //     id: 4,
-    //     title: "Innovations in Dish Care Liquids",
-    //     category: "Manufacturing",
-    //     date: "April 30, 2026",
-    //     readTime: "5 min",
-    //     image: "https://picsum.photos/seed/blog4/800/600",
-    //     excerpt: "How we formulate liquids that cut through grease while being gentle on hands.",
-    //     content: `
-    //       <p>Creating the perfect dish wash liquid is a science. It requires balancing chemical strength with skin safety. At Frezool, our Phenora dish wash range exemplifies this balance.</p>
-    //       <h2>The Science of Surfactants</h2>
-    //       <p>Surfactants lower the surface tension of water, allowing it to mix with oils and grease. We use a blend of anionic and non-ionic surfactants to lift grease instantly.</p>
-    //       <h3>Protecting Your Hands</h2>
-    //       <p>While grease removal is the goal, skin irritation is a common side effect of cheap liquids. We incorporate natural moisturizers like Aloe Vera extracts into our formula to create a protective barrier on the skin.</p>
-    //     `
-    //   },
-    //   {
-    //     id: 5,
-    //     title: "Reducing Plastic Waste in Packaging",
-    //     category: "Sustainability",
-    //     date: "April 10, 2026",
-    //     readTime: "4 min",
-    //     image: "https://picsum.photos/seed/blog5/800/600",
-    //     excerpt: "Exploring the shift towards recyclable materials and sustainable packaging design in the FMCG sector.",
-    //     content: `
-    //       <p>Packaging is essential for product preservation, but it contributes significantly to global waste. We are actively exploring solutions to this challenge.</p>
-    //       <h2>The Shift to HDPE</h2>
-    //       <p>High-Density Polyethylene (HDPE) is one of the most easily recycled plastics. We have standardized our bottles to be mono-material HDPE, making them easier for recycling facilities to process.</p>
-    //       <h3>Lightweighting</h3>
-    //       <p>By reducing the thickness of our bottle walls without compromising durability, we use less plastic per unit. Over millions of units, this saves tons of plastic material annually.</p>
-    //     `
-    //   }
-    // ];
+            //     // Handle dropdown buttons specifically
+            //     document.querySelectorAll('.dropdown button').forEach(btn => {
+            //         btn.classList.remove('text-white', 'hover:text-navy-900', 'hover:bg-white/10');
+            //         btn.classList.add('text-navy-700', 'hover:text-brand-600', 'hover:bg-navy-50');
+            //     });
 
+            //     if (iconColor) {
+            //         iconColor.classList.remove('text-white');
+            //         iconColor.classList.add('text-navy-900');
+            //     }
+            // } else {
+            //     nav.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+            //     defaultLogo.classList.remove('opacity-0');
+            //     scrolledLogo.classList.add('opacity-0');
 
-    const blogPosts = [
-  {
-  id: 1,
-  title: "CSIR-CIMAP and Frezool Industries Sign MoU for Herbal Product Market Seeding",
-  category: "Innovation",
-  date: "May 25, 2026",
-  readTime: "6 min",
-  image: "https://www.cimap.res.in/images/headquarterAtLucknow.jfif",
-  excerpt: "Frezool Industries partners with CSIR-CIMAP to accelerate herbal innovation and bring science-backed wellness products to market.",
-  content: `
-    <p><strong>Strengthening Innovation in Herbal Wellness and Sustainable Consumer Products</strong></p>
+            //     // Revert text color for default state (transparent/dark bg)
+            //     navLinks.forEach(link => {
+            //         link.classList.add('text-white', 'hover:text-navy-900', 'hover:bg-white/10');
+            //         link.classList.remove('text-navy-700', 'hover:text-brand-600', 'hover:bg-navy-50');
+            //     });
 
-    <p>In a significant step toward promoting innovation-driven herbal products in India, CSIR-Central Institute of Medicinal and Aromatic Plants (CSIR-CIMAP) announced the signing of key agreements during the National Technology Day 2026 celebrations.</p>
+            //     document.querySelectorAll('.dropdown button').forEach(btn => {
+            //         btn.classList.add('text-white', 'hover:text-navy-900', 'hover:bg-white/10');
+            //         btn.classList.remove('text-navy-700', 'hover:text-brand-600', 'hover:bg-navy-50');
+            //     });
 
-    <p>Among the major highlights was the signing of a Memorandum of Understanding (MoU) with Frezool Industries Pvt. Ltd. for the market seeding of five herbal products developed with scientific and research-backed support.</p>
+            //     if (iconColor) {
+            //         iconColor.classList.add('text-white');
+            //         iconColor.classList.remove('text-navy-900');
+            //     }
+            // }
 
-    <p>This collaboration reflects a shared vision of bringing advanced herbal and wellness solutions to Indian consumers through innovation, sustainability, and scientific excellence.</p>
+            // Back to top visibility
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            }
 
-    <h2>Bridging Research and Consumer Markets</h2>
-    <p>The partnership between CSIR-CIMAP and Frezool Industries aims to accelerate the commercialization and market introduction of herbal products designed for modern lifestyle and hygiene needs.</p>
+            // Reveal Animation Logic
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        });
 
-    <p>With growing consumer demand for natural, plant-based, and eco-conscious products, this initiative is expected to create new opportunities in the wellness, hygiene, and household care sectors.</p>
+        // =================== BLOG DATA & LOGIC ===================
 
-    <p>The agreement also demonstrates how scientific institutions and private enterprises can work together to transform research into scalable consumer solutions.</p>
+        const blogPosts = [
+            {
+                id: 1,
+                title: "CSIR-CIMAP and Frezool Industries Sign MoU for Herbal Product Market Seeding",
+                category: "Innovation",
+                date: "May 25, 2026",
+                readTime: "6 min",
+                image: "https://www.cimap.res.in/images/headquarterAtLucknow.jfif",
+                excerpt: "Frezool Industries partners with CSIR-CIMAP to accelerate herbal innovation and bring science-backed wellness products to market.",
+                content: `
+          <p><strong>Strengthening Innovation in Herbal Wellness and Sustainable Consumer Products</strong></p>
 
-    <h2>National Technology Day 2026: Key Collaborations</h2>
-    <p>The National Technology Day celebrations at CSIR-CIMAP featured several impactful collaborations focused on sustainability, biotechnology, and herbal innovation, including:</p>
+          <p>In a significant step toward promoting innovation-driven herbal products in India, CSIR-Central Institute of Medicinal and Aromatic Plants (CSIR-CIMAP) announced the signing of key agreements during the National Technology Day 2026 celebrations.</p>
 
-    <ul>
-      <li>MoU with Frezool Industries Pvt. Ltd. for market seeding of five herbal products.</li>
-      <li>Technology Transfer Agreement with ICAR-KVK Ernakulam for localized production of herbal bio-agents.</li>
-      <li>Three-year partnership with Lucknow Development Authority for urban greening and medicinal plant landscaping projects.</li>
-      <li>Collaboration with Tantia University for wellness and hygiene-related TBIC services.</li>
-    </ul>
+          <p>Among the major highlights was the signing of a Memorandum of Understanding (MoU) with Frezool Industries Pvt. Ltd. for the market seeding of five herbal products developed with scientific and research-backed support.</p>
 
-    <p>These initiatives collectively highlight the growing role of herbal science and sustainable technologies in shaping India’s future innovation ecosystem.</p>
+          <p>This collaboration reflects a shared vision of bringing advanced herbal and wellness solutions to Indian consumers through innovation, sustainability, and scientific excellence.</p>
 
-    <h2>Advancing India’s Herbal Innovation Ecosystem</h2>
-    <p>India continues to witness rising demand for herbal and naturally derived consumer products across categories such as floor cleaners, hand washes, wellness products, and personal care solutions.</p>
+          <h2>Bridging Research and Consumer Markets</h2>
+          <p>The partnership between CSIR-CIMAP and Frezool Industries aims to accelerate the commercialization and market introduction of herbal products designed for modern lifestyle and hygiene needs.</p>
 
-    <p>Collaborations like this help bridge the gap between laboratory research and real-world consumer adoption by enabling faster product development, validation, and market access.</p>
+          <p>With growing consumer demand for natural, plant-based, and eco-conscious products, this initiative is expected to create new opportunities in the wellness, hygiene, and household care sectors.</p>
 
-    <p>Frezool Industries remains committed to building premium, science-backed, and sustainable product solutions aligned with the future of conscious consumerism.</p>
+          <p>The agreement also demonstrates how scientific institutions and private enterprises can work together to transform research into scalable consumer solutions.</p>
 
-    <h2>Conclusion</h2>
-    <p>The collaboration between CSIR-CIMAP and Frezool Industries Pvt. Ltd. marks an important milestone in advancing herbal innovation and sustainable product development in India.</p>
+          <h2>National Technology Day 2026: Key Collaborations</h2>
+          <p>The National Technology Day celebrations at CSIR-CIMAP featured several impactful collaborations focused on sustainability, biotechnology, and herbal innovation, including:</p>
 
-    <p>As research institutions and industry leaders come together, such partnerships are expected to contribute significantly toward eco-friendly consumer solutions, technological advancement, and the growth of India’s herbal economy.</p>
-  `
-},
+          <ul>
+            <li>MoU with Frezool Industries Pvt. Ltd. for market seeding of five herbal products.</li>
+            <li>Technology Transfer Agreement with ICAR-KVK Ernakulam for localized production of herbal bio-agents.</li>
+            <li>Three-year partnership with Lucknow Development Authority for urban greening and medicinal plant landscaping projects.</li>
+            <li>Collaboration with Tantia University for wellness and hygiene-related TBIC services.</li>
+          </ul>
 
-  // {
-  //   id: 2,
-  //   title: "The Future of Eco-Friendly Home Care",
-  //   category: "Sustainability",
-  //   date: "Oct 12, 2026",
-  //   readTime: "5 min",
-  //   image: "https://picsum.photos/seed/blog1/800/600",
-  //   excerpt: "Discover how biodegradable ingredients are revolutionizing the cleaning industry and reducing environmental impact.",
-  //   content: `
-  //     <p>The FMCG industry is undergoing a rapid transformation driven by environmental awareness and regulatory changes. Consumers are increasingly shifting toward eco-friendly home care products that are safe, effective, and sustainable.</p>
+          <p>These initiatives collectively highlight the growing role of herbal science and sustainable technologies in shaping India’s future innovation ecosystem.</p>
 
-  //     <h2>Rise of Sustainable Cleaning Solutions</h2>
-  //     <p>Traditional cleaning agents often contain phosphates, sulfates, and synthetic chemicals that contribute to water pollution. Modern formulations focus on plant-based surfactants and biodegradable ingredients that naturally break down without harming ecosystems.</p>
+          <h2>Advancing India’s Herbal Innovation Ecosystem</h2>
+          <p>India continues to witness rising demand for herbal and naturally derived consumer products across categories such as floor cleaners, hand washes, wellness products, and personal care solutions.</p>
 
-  //     <h2>Innovation in Product Formulation</h2>
-  //     <p>At Frezool Industries, research is focused on developing concentrated cleaning solutions that reduce packaging waste, transportation emissions, and water usage during manufacturing.</p>
+          <p>Collaborations like this help bridge the gap between laboratory research and real-world consumer adoption by enabling faster product development, validation, and market access.</p>
 
-  //     <h2>Environmental Benefits</h2>
-  //     <ul>
-  //       <li>Reduced carbon footprint through lightweight formulations</li>
-  //       <li>Lower plastic consumption via recyclable packaging</li>
-  //       <li>Safe decomposition in water systems</li>
-  //       <li>Improved indoor air quality with low-VOC formulas</li>
-  //     </ul>
+          <p>Frezool Industries remains committed to building premium, science-backed, and sustainable product solutions aligned with the future of conscious consumerism.</p>
 
-  //     <h2>Future Outlook</h2>
-  //     <p>The future of home care lies in complete sustainability integration—where performance, safety, and environmental responsibility coexist seamlessly.</p>
-  //   `
-  // },
+          <h2>Conclusion</h2>
+          <p>The collaboration between CSIR-CIMAP and Frezool Industries Pvt. Ltd. marks an important milestone in advancing herbal innovation and sustainable product development in India.</p>
 
-  // {
-  //   id: 3,
-  //   title: "Maintaining Hygiene Standards in FMCG Manufacturing",
-  //   category: "Manufacturing",
-  //   date: "March 28, 2026",
-  //   readTime: "7 min",
-  //   image: "https://picsum.photos/seed/blog2/800/600",
-  //   excerpt: "An in-depth look at strict quality control systems ensuring product safety, consistency, and global compliance.",
-  //   content: `
-  //     <p>In FMCG manufacturing, hygiene and quality control are critical pillars that define product safety and consumer trust.</p>
+          <p>As research institutions and industry leaders come together, such partnerships are expected to contribute significantly toward eco-friendly consumer solutions, technological advancement, and the growth of India’s herbal economy.</p>
+        `
+            },
+            // Note: Commented out posts from original code preserved below for future use
+            /*
+            {
+              id: 2,
+              title: "The Future of Eco-Friendly Home Care",
+              category: "Sustainability",
+              date: "Oct 12, 2026",
+              readTime: "5 min",
+              image: "https://picsum.photos/seed/blog1/800/600",
+              excerpt: "Discover how biodegradable ingredients are revolutionizing the cleaning industry and reducing environmental impact.",
+              content: `...`
+            },
+            */
+        ];
 
-  //     <h2>Good Manufacturing Practices (GMP)</h2>
-  //     <p>Our facilities follow globally recognized GMP standards that ensure every stage of production meets strict hygiene and safety requirements.</p>
+        const gridContainer = document.getElementById('posts-grid');
+        const gridView = document.getElementById('blog-grid-view');
+        const singleView = document.getElementById('single-post-view');
 
-  //     <h2>Clean-In-Place (CIP) Technology</h2>
-  //     <p>Automated CIP systems are used to clean and sterilize production tanks, pipelines, and mixing units without dismantling equipment. This ensures zero contamination risk between batches.</p>
+        // Render Grid
+        function renderPosts(filter = 'all') {
+            gridContainer.innerHTML = '';
 
-  //     <h2>Multi-Level Quality Assurance</h2>
-  //     <ul>
-  //       <li>Raw material inspection and verification</li>
-  //       <li>In-process quality monitoring</li>
-  //       <li>Final product laboratory testing</li>
-  //       <li>Microbial contamination analysis</li>
-  //     </ul>
+            const filteredPosts = filter === 'all'
+                ? blogPosts
+                : blogPosts.filter(post => post.category === filter);
 
-  //     <h2>Key Testing Parameters</h2>
-  //     <p>Each product batch undergoes rigorous testing including pH balance, viscosity stability, fragrance consistency, and microbial safety checks.</p>
+            if (filteredPosts.length === 0) {
+                gridContainer.innerHTML = `<div class="col-span-full text-center py-12 text-navy-500">No posts found in this category.</div>`;
+                return;
+            }
 
-  //     <h2>Outcome</h2>
-  //     <p>This structured quality system ensures consistency, safety, and trust across every product delivered to the market.</p>
-  //   `
-  // },
+            filteredPosts.forEach((post, index) => {
+                const card = document.createElement('div');
+                card.className = "group flex flex-col bg-white rounded-2xl shadow-sm border border-navy-100 overflow-hidden hover:shadow-xl hover:shadow-navy-200/50 transition-all duration-300 cursor-pointer";
+                card.style.animationDelay = `${index * 100}ms`;
+                card.onclick = () => openPost(post.id);
 
-  // {
-  //   id: 4,
-  //   title: "5 Essential Tips for a Germ-Free Kitchen",
-  //   category: "Hygiene",
-  //   date: "March 15, 2026",
-  //   readTime: "4 min",
-  //   image: "https://picsum.photos/seed/blog3/800/600",
-  //   excerpt: "Expert-backed hygiene practices to maintain a safe, clean, and bacteria-free kitchen environment.",
-  //   content: `
-  //     <p>The kitchen is one of the most active areas in any household and also one of the most prone to bacterial contamination.</p>
-
-  //     <h2>1. Regular Surface Disinfection</h2>
-  //     <p>High-touch surfaces such as countertops, handles, and switches should be disinfected daily using effective cleaning solutions.</p>
-
-  //     <h2>2. Prevent Cross-Contamination</h2>
-  //     <p>Use separate cutting boards for raw meat, vegetables, and cooked food to avoid bacterial transfer.</p>
-
-  //     <h2>3. Deep Cleaning of Sink Areas</h2>
-  //     <p>Kitchen sinks can harbor harmful bacteria. Regular scrubbing with disinfectant helps maintain hygiene.</p>
-
-  //     <h2>4. Proper Storage of Food</h2>
-  //     <p>Always store food in airtight containers and maintain proper refrigeration temperatures.</p>
-
-  //     <h2>5. Hygiene of Cleaning Tools</h2>
-  //     <p>Sponges and cloths must be sanitized frequently or replaced to avoid bacterial growth.</p>
-
-  //     <h2>Conclusion</h2>
-  //     <p>Maintaining kitchen hygiene is essential for ensuring family health and preventing foodborne illnesses.</p>
-  //   `
-  // },
-
-  // {
-  //   id: 5,
-  //   title: "Innovations in Dish Care Liquids",
-  //   category: "Manufacturing",
-  //   date: "April 30, 2026",
-  //   readTime: "6 min",
-  //   image: "https://picsum.photos/seed/blog4/800/600",
-  //   excerpt: "Exploring the science behind grease removal and development of skin-friendly dishwashing solutions.",
-  //   content: `
-  //     <p>Dishwashing liquid formulation requires a careful balance between cleaning efficiency and skin safety.</p>
-
-  //     <h2>Advanced Surfactant Systems</h2>
-  //     <p>Modern dish care products use a combination of anionic and non-ionic surfactants that effectively break down grease and oil molecules.</p>
-
-  //     <h2>Skin Protection Technology</h2>
-  //     <p>To prevent dryness and irritation, formulations are enriched with natural moisturizers such as Aloe Vera and glycerin-based compounds.</p>
-
-  //     <h2>Performance Testing</h2>
-  //     <ul>
-  //       <li>Grease removal efficiency tests</li>
-  //       <li>Foam stability evaluation</li>
-  //       <li>Skin compatibility testing</li>
-  //       <li>Water hardness performance checks</li>
-  //     </ul>
-
-  //     <h2>Result</h2>
-  //     <p>The outcome is a high-performance cleaning solution that is tough on grease yet gentle on hands.</p>
-  //   `
-  // },
-
-  // {
-  //   id: 6,
-  //   title: "Reducing Plastic Waste in Packaging",
-  //   category: "Sustainability",
-  //   date: "April 10, 2026",
-  //   readTime: "5 min",
-  //   image: "https://picsum.photos/seed/blog5/800/600",
-  //   excerpt: "Sustainable packaging strategies aimed at reducing plastic waste in FMCG industries.",
-  //   content: `
-  //     <p>Packaging plays a crucial role in product protection but is also a major contributor to environmental waste.</p>
-
-  //     <h2>Shift to Recyclable Materials</h2>
-  //     <p>We are adopting mono-material HDPE packaging to ensure easier recycling and reduced environmental impact.</p>
-
-  //     <h2>Lightweight Engineering</h2>
-  //     <p>Reducing bottle weight while maintaining durability helps significantly cut down plastic usage at scale.</p>
-
-  //     <h2>Eco-Friendly Innovation</h2>
-  //     <ul>
-  //       <li>Use of recycled plastics (rHDPE)</li>
-  //       <li>Reduction in packaging thickness</li>
-  //       <li>Optimized transport efficiency</li>
-  //       <li>Lower carbon emissions in logistics</li>
-  //     </ul>
-
-  //     <h2>Future Vision</h2>
-  //     <p>The long-term goal is to move toward a circular economy model where packaging is continuously reused and recycled.</p>
-  //   `
-  // }
-];
-
-    const gridContainer = document.getElementById('posts-grid');
-    const gridView = document.getElementById('blog-grid-view');
-    const singleView = document.getElementById('single-post-view');
-
-    // Render Grid
-    function renderPosts(filter = 'all') {
-      gridContainer.innerHTML = '';
-      
-      const filteredPosts = filter === 'all' 
-        ? blogPosts 
-        : blogPosts.filter(post => post.category === filter);
-
-      filteredPosts.forEach((post, index) => {
-        const card = document.createElement('div');
-        card.className = "group flex flex-col bg-white rounded-2xl shadow-sm border border-navy-100 overflow-hidden hover:shadow-xl hover:shadow-navy-200/50 transition-all duration-300 cursor-pointer";
-        card.style.animationDelay = `${index * 100}ms`;
-        card.onclick = () => openPost(post.id);
-
-        card.innerHTML = `
+                card.innerHTML = `
           <div class="relative h-48 overflow-hidden">
             <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
             <div class="absolute top-4 left-4">
@@ -737,52 +706,54 @@
             </div>
           </div>
         `;
-        gridContainer.appendChild(card);
-      });
-      lucide.createIcons();
-    }
+                gridContainer.appendChild(card);
+            });
+            lucide.createIcons();
+        }
 
-    // Filter Function
-    function filterPosts(category, btn) {
-      // Update active button state
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('bg-navy-900', 'text-white');
-        b.classList.add('bg-navy-50', 'text-navy-600');
-      });
-      btn.classList.remove('bg-navy-50', 'text-navy-600');
-      btn.classList.add('bg-navy-900', 'text-white');
-      
-      renderPosts(category);
-    }
+        // Filter Function
+        function filterPosts(category, btn) {
+            // Update active button state
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('bg-navy-900', 'text-white', 'shadow-md', 'shadow-navy-900/20');
+                b.classList.add('bg-white', 'text-navy-600', 'border', 'border-navy-100');
+            });
+            btn.classList.remove('bg-white', 'text-navy-600', 'border', 'border-navy-100');
+            btn.classList.add('bg-navy-900', 'text-white', 'shadow-md', 'shadow-navy-900/20');
 
-    // Open Single Post
-    function openPost(id) {
-      const post = blogPosts.find(p => p.id === id);
-      if (!post) return;
+            renderPosts(category);
+        }
 
-      // Populate data
-      document.getElementById('post-title').textContent = post.title;
-      document.getElementById('post-category-badge').textContent = post.category;
-      document.getElementById('post-date').textContent = post.date;
-      document.getElementById('post-read-time').textContent = post.readTime;
-      document.getElementById('post-image').src = post.image;
-      document.getElementById('post-body').innerHTML = post.content;
+        // Open Single Post
+        function openPost(id) {
+            const post = blogPosts.find(p => p.id === id);
+            if (!post) return;
 
-      // Toggle Views
-      gridView.classList.add('hidden');
-      singleView.classList.remove('hidden');
-      window.scrollTo(0, 0);
-    }
+            // Populate data
+            document.getElementById('post-title').textContent = post.title;
+            document.getElementById('post-category-badge').textContent = post.category;
+            document.getElementById('post-date').textContent = post.date;
+            document.getElementById('post-read-time').textContent = post.readTime;
+            document.getElementById('post-image').src = post.image;
+            document.getElementById('post-body').innerHTML = post.content;
 
-    // Close Single Post (Return to Grid)
-    function closePost() {
-      singleView.classList.add('hidden');
-      gridView.classList.remove('hidden');
-      window.scrollTo(0, 0);
-    }
+            // Toggle Views
+            gridView.classList.add('hidden');
+            singleView.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
 
-    // Initialize
-    renderPosts();
-  </script>
+        // Close Single Post (Return to Grid)
+        function closePost() {
+            singleView.classList.add('hidden');
+            gridView.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        // Initialize
+        renderPosts();
+    </script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
